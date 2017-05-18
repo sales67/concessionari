@@ -1,18 +1,30 @@
 <html>
     <head>
         <style>
-html {background-color: aliceblue;}
+html {background-color: skyblue;}
 </style>
     </head>
 <h1>
     {{title}}
 </h1>
 
-<nav>
-    <a routerLink="/client" routerLinkActive="active">Client</a>
-    <a routerLink="/marca" routerLinkActive="active">Marca</a>
-    <a routerLink="/model" routerLinkActive="active">Model</a>
-    <a routerLink="/equipament" routerLinkActive="active">Equipament</a>
-</nav>
+    <div id="cssmenu">
+        <ul>
+        <li class="active"><a routerLink="/client" routerLinkActive="active" href="index.html">Client</a></li>
+        <li class="has-sub "><a routerLink="/marca" routerLinkActive="active">Marca</a>
+            <ul>
+                <li><a routerLink="/addMarca" routerLinkActive="active">Afegir Marca</a></li>
+                <li><a routerLink="/updateMarca" routerLinkActive="active">Actualitzar Marca</a></li>
+                <li><a routerLink="/listMarca" routerLinkActive="active">Mostrar les Marques</a></li>
+                <li><a class="delete" routerLink="/deleteMarca" routerLinkActive="active">Esborrar una marca</a></li>
+            </ul>
+        </li>
+        <li><a href="#" routerLink="/model" routerLinkActive="active" >Model</a></li>
+        <li><a href="#" routerLink="/equipament" routerLinkActive="active" >Equipaments</a></li>
+        </ul>
+    </div>
+    
+    
+
 <router-outlet></router-outlet>
 </html>
