@@ -1,2 +1,0 @@
-# concessionari
-Projecte conceccionari itteria
