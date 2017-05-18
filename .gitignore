@@ -1,6 +1,10 @@
+<<<<<<< HEAD
+/node_modules/*
+=======
 typings
 app/**/*.js
 app/**/*.map
 node_modules
 jspm_packages
 bower_components
+>>>>>>> 5b56f4cc09658bb888d53df16841200d266685d4
