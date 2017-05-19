@@ -40,8 +40,8 @@ const routes: Routes = [
   },
     {
     path: 'listMarca',
+    component: ListMarcaComponent
 
-    component: EquipamentComponent
   }, {
     path: 'update',
     component: UpdateComponent

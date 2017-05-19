@@ -30,6 +30,12 @@ import { DeleteComponent } from './client/delete/delete.component';
       EquipamentComponent,
       ModelComponent,
 
+
+      RegistComponent,
+      UpdateComponent,
+      DeleteComponent,
+
+
       RegistComponent,
       UpdateComponent,
       DeleteComponent,

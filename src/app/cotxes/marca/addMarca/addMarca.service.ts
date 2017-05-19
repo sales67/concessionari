@@ -16,4 +16,17 @@ private marcaUrl = 'http://localhost:8080/cotxe/addMarca?id=%ld&nom=%s&idConce=%
 
 constructor(private http: Http){}
 
+
+addMarcaPost(addName,addConce,addCountry,addYear){     
+        var creds = "nom=" + addName + "&idConce=" + addConce + "&pais=" + addCountry + "&any=" + addYear;
+        
+          var headers = new Headers();
+        headers.append('Content-Type', 'application/x-www-form-urlencoded');
+        
+        var a = this.http.post('http://localhost:8080/cotxe/addMarca',creds,{
+            headers:headers
+        })
+                    .map(res => res.json());
+        return a; 
+    }
 }
