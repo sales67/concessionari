@@ -23,7 +23,7 @@ export class RegistComponent implements OnInit{
                                         this.correuR, this.direccioR, this.telefonR)
             .subscribe(
             data => { this.registC = data },
-            () => console.log('done' + this.registC));
+            () => console.log('Has afegit a' + this.nomR));
     }
 
     ngOnInit() {
