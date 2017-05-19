@@ -1,4 +1,8 @@
 ﻿import { Component, OnInit } from '@angular/core';
+import { MarcaService } from '../marca/marca.service';
+import { Http, Headers, Response } from '@angular/http';
+import { Routes, Router } from '@angular/router';
+import { Client } from './client';
 
 @Component({
   selector: 'app-client',
@@ -6,12 +10,8 @@
   styleUrls: ['./client.component.css']
 })
 
-export class ClientComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-
+export class ClientComponent {
+    title = 'COTXES APP';
 }
+
+

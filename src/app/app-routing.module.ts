@@ -1,10 +1,15 @@
-import { NgModule } from '@angular/core';
+﻿import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ClientComponent } from './cotxes/client/client.component';
 import { MarcaComponent } from './cotxes/marca/marca.component';
 import { ModelComponent } from './cotxes/model/model.component';
 import { EquipamentComponent } from './cotxes/equipament/equipament.component';
+
+import { RegistComponent } from './cotxes/client/regist/regist.component';
+import { UpdateComponent } from './cotxes/client/update/update.component';
+import { DeleteComponent } from './cotxes/client/delete/delete.component';
+
 
 const routes: Routes = [
   {
@@ -30,8 +35,14 @@ const routes: Routes = [
     path: 'listMarca',
     component: EquipamentComponent
   }, {
-    path: 'deleteMarca',
-    component: EquipamentComponent
+    path: 'update',
+    component: UpdateComponent
+  }, {
+      path: 'delete',
+      component: DeleteComponent
+  }, {
+      path: 'regist',
+      component: RegistComponent
   }
 ];
 

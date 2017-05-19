@@ -1,0 +1,19 @@
+﻿<form name="put" display="block">
+  <h2>Modifica els clients</h2>
+  <label for="content">Numero identificatiu del client</label><br>
+  <input type="text" name="putPn" [(ngModel)]="idU"><br />
+  <label for="content">Dni del client</label><br>
+  <input type="text" name="putPn" [(ngModel)]="dniU"><br />
+  <label for="content">Nom del client</label><br>
+  <input type="text" name="putPn" [(ngModel)]="nomU"><br />
+  <label for="content">Cognoms del client</label><br>
+  <input type="text" name="putPn" [(ngModel)]="cognomsU"><br />
+  <label for="content">Correu del client</label><br>
+  <input type="text" name="putPn" [(ngModel)]="correuU"><br />
+  <label for="content">Direccio del client</label><br>
+  <input type="text" name="putPn" [(ngModel)]="direccioU"><br />
+  <label for="content">Telefon del client</label><br>
+  <input type="text" name="putPn" [(ngModel)]="telefonU"><br />
+
+  <button (click)="update()" type="submit" class="btn btn-default">Modificar</button>
+</form>
