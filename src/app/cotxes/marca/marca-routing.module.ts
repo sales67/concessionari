@@ -1,7 +1,7 @@
 ﻿import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { addMarcaComponent } from './addMarca/addMarca.component';
+import { AddMarcaComponent } from './addMarca/addMarca.component';
 //import { updateMarcaComponent } from './updateMarca/updateMarca.component';
 //import { listMarcaComponent } from './listMarca/listMarca.component';
 //import { deleteMarcaComponent } from './deleteMarca/deleteMarca.component';
