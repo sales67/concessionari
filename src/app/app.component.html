@@ -26,7 +26,13 @@ html {background-color: skyblue;}
                 <li><a class="delete" routerLink="deleteMarca" routerLinkActive="active">Esborrar una marca</a></li>
             </ul>
         </li>
-        <li><a href="#" routerLink="/model" routerLinkActive="active" >Model</a></li>
+        <li><a href="#" routerLink="/model" routerLinkActive="active" >Model</a>
+        <ul>
+            <li><a routerLink="addModel" routerLinkActive="active">Afegir Model</a></li>
+                <li><a routerLink="updateModel" routerLinkActive="active">Actualitzar Model</a></li>
+                <li><a routerLink="listModel" routerLinkActive="active">Mostrar els models</a></li>
+                <li><a class="delete" routerLink="deleteModel" routerLinkActive="active">Esborrar un model</a></li>
+        </ul></li>
         <!-- <li><a href="#" routerLink="/equipament" routerLinkActive="active" >Equipaments</a></li> -->
         <li class="has-sub "><a routerLink="/equipament" routerLinkActive="active">Equipament</a>
             <ul>
