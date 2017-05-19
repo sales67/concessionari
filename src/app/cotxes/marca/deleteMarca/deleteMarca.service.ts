@@ -10,12 +10,13 @@ import {sprintf} from "sprintf-js";
 @Injectable()
 
 export class DeleteMarcaService{
-private cotxeUrl = 'http://localhost:8080/cotxe/listMarca';
-private modelUrl = 'http://localhost:8080/cotxe/getModel?id=';
-private marcaUrl = 'http://localhost:8080/cotxe/addMarca?id=%ld&nom=%s&idConce=%ld&pais=%s&any=%ld';
+private delUrl = 'http://localhost:8080/cotxe/delMarca?id=';
 
 constructor(private http: Http){}
 
-
+deleteMarca(deleteId){ 
+        var a = this.http.delete(this.delUrl+ deleteId);
+    return a;
+    }
 
 }

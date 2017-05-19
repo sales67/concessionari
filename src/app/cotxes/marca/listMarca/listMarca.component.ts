@@ -7,11 +7,20 @@ import {Routes,Router} from '@angular/router';
 @Component({
   selector: 'listMarca',
   templateUrl:'./listMarca.component.html',
+    styleUrls: ['../marca.component.css'],
   providers: [ListMarcaService]
 })
 
     export class ListMarcaComponent{
 
     constructor(private listMarcaService: ListMarcaService) { }
-             
+         marques; 
+        
+    listMarca(){
+     this.listMarcaService.getMarques()
+                .subscribe(
+                data => { this.marques = data;console.log(data);},
+                err => console.error(err),
+                () => console.log('done')
+      );}
     }

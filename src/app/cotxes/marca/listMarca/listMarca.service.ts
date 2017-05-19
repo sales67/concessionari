@@ -16,6 +16,10 @@ private marcaUrl = 'http://localhost:8080/cotxe/addMarca?id=%ld&nom=%s&idConce=%
 
 constructor(private http: Http){}
 
-
+getMarques() {
+      var a = this.http.get(this.cotxeUrl)
+                .map(res => res.json())
+      return a;
+  }
 
 }
