@@ -7,7 +7,7 @@ import {Routes,Router} from '@angular/router';
 @Component({
   selector: 'UpdateMarca',
   templateUrl:'./UpdateMarca.component.html',
- styleUrls: ['../marca.component.css'],
+  styleUrls: ['../../cotxes.css'],
   providers: [UpdateMarcaService]
 })
 

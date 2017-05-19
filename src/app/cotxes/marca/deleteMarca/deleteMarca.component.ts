@@ -7,7 +7,7 @@ import {Routes,Router} from '@angular/router';
 @Component({
   selector: 'deleteMarca',
   templateUrl:'./deleteMarca.component.html',
-    styleUrls: ['../marca.component.css'],
+  styleUrls: ['../../cotxes.css'],
   providers: [DeleteMarcaService]
 })
 

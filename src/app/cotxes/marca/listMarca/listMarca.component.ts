@@ -7,7 +7,7 @@ import {Routes,Router} from '@angular/router';
 @Component({
   selector: 'listMarca',
   templateUrl:'./listMarca.component.html',
-    styleUrls: ['../marca.component.css'],
+  styleUrls: ['../../cotxes.css'],
   providers: [ListMarcaService]
 })
 

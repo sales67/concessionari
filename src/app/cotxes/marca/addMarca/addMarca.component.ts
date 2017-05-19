@@ -6,7 +6,7 @@ import {AddMarcaService} from '../addMarca/addMarca.service';
 @Component({
   selector: 'addMarca',
   templateUrl:'./addMarca.component.html',
-    styleUrls: ['../marca.component.css'],
+  styleUrls: ['../../cotxes.css'],
   providers: [AddMarcaService]
 })
 
