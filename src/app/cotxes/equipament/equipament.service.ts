@@ -31,4 +31,11 @@ export class EquipamentService {
       
         return a;
     }
+
+    esborrarEq(id) {
+        var a = this.http.delete(this.myURL + '/demo/del?id=' + id)
+        .map(res => res.json())
+      
+        return a;
+    }
 }
