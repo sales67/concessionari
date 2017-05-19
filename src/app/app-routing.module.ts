@@ -40,7 +40,7 @@ const routes: Routes = [
   },
     {
     path: 'listMarca',
-<<<<<<< HEAD
+
     component: EquipamentComponent
   }, {
     path: 'update',
@@ -51,13 +51,12 @@ const routes: Routes = [
   }, {
       path: 'regist',
       component: RegistComponent
-=======
-    component: ListMarcaComponent
+
   },
     {
     path: 'deleteMarca',
     component: DeleteMarcaComponent
->>>>>>> 5f52f909119bc9337bac3604e639b9ce5917c9d3
+
   }
 ];
 
