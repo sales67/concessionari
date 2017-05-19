@@ -25,6 +25,10 @@ export class EquipamentService {
       return a;
     }
 
-    
-
+    getEqs() {
+        var a = this.http.get(this.myURL + '/demo/all')
+        .map(res => res.json())
+      
+        return a;
+    }
 }
