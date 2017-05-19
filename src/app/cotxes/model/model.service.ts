@@ -23,6 +23,21 @@ export class ModelService{
                 .map(res => res.json())
       return a;
 	}
+   
+addModelPost(addName,addMarca){     
+        var creds = "nom=" + addName + "&marca=" + addMarca;
+        
+          var headers = new Headers();
+        headers.append('Content-Type', 'application/x-www-form-urlencoded');
+        
+        var a = this.http.post('http://172.17.0.242:8080/demo/newModel',creds,{
+            headers:headers
+        })
+                    .map(res => res.json());
+        return a; 
+    }
+
+}
 	/*
 	private cotxeUrl = 'http://localhost:8080/cotxe/listMarca';
 private modelUrl = 'http://localhost:8080/cotxe/getModel?id=';
@@ -73,4 +88,3 @@ constructor(private http: Http){}
     }
 	*/
 
-}
