@@ -9,7 +9,7 @@ import { Client } from '../client';
 @Component({
   selector: 'app-delete',
   templateUrl: './delete.component.html',
-  styleUrls: ['./delete.component.css'],
+  styleUrls: ['../../cotxes.css'],
   providers: [DeleteService]
 })
 export class DeleteComponent implements OnInit {

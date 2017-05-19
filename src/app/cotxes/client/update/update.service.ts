@@ -19,7 +19,7 @@ export class UpdateService {
         headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
 
-        var a = this.http.put('http://localhost:8080/client/put', crear, {
+        var a = this.http.put('http://172.17.0.161:8080/client/put', crear, {
             headers: headers
         })
             .map(res => res.json());

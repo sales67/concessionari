@@ -9,7 +9,7 @@ import { Client } from '../client';
 @Component({
   selector: 'app-regist',
   templateUrl: './regist.component.html',
-  styleUrls: ['./regist.component.css'],
+  styleUrls: ['../../cotxes.css'],
   providers: [RegistService]
 })
 export class RegistComponent implements OnInit{

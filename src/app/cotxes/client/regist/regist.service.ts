@@ -18,7 +18,7 @@ export class RegistService {
         headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
 
-        var a = this.http.post('http://localhost:8080/client/add', crear, {
+        var a = this.http.post('http://172.17.0.161:8080/client/add', crear, {
             headers: headers
         })
             .map(res => res.json());

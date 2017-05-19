@@ -9,7 +9,7 @@ import { Client } from '../client';
 @Component({
     selector: 'app-update',
     templateUrl: './update.component.html',
-    styleUrls: ['./update.component.css'],
+    styleUrls: ['../../cotxes.css'],
     providers: [UpdateService]
 })
 export class UpdateComponent implements OnInit {

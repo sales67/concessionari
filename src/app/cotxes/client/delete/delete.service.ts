@@ -18,7 +18,7 @@ export class DeleteService {
         headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
 
-        var a = this.http.delete('http://localhost:8080/client/delete'+ crear, {
+        var a = this.http.delete('http://172.17.0.161:8080/client/delete'+ crear, {
             headers: headers
         })
             .map(res => res.json());
