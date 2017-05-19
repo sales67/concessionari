@@ -12,11 +12,11 @@ import {AddMarcaService} from '../addMarca/addMarca.service';
 
     export class AddMarcaComponent{
         
-        addName;addConce;addCountry;addYear;
+        addName;addTel;addCountry;addMail;
 
     constructor(private addMarcaService: AddMarcaService) { }
         
-     addMarcaPost(){        this.addMarcaService.addMarcaPost(this.addName,this.addConce,this.addCountry,this.addYear)
+     addMarcaPost(){        this.addMarcaService.addMarcaPost(this.addName,this.addTel,this.addCountry,this.addMail)
                .subscribe(
                 data => { this.addName = data;},    
                 () => console.log('has afegit la marca: '+this.addName)

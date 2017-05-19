@@ -10,19 +10,17 @@ import {sprintf} from "sprintf-js";
 @Injectable()
 
 export class UpdateMarcaService{
-private cotxeUrl = 'http://localhost:8080/cotxe/listMarca';
-private modelUrl = 'http://localhost:8080/cotxe/getModel?id=';
-private marcaUrl = 'http://localhost:8080/cotxe/addMarca?id=%ld&nom=%s&idConce=%ld&pais=%s&any=%ld';
+private updateUrl = 'http://172.17.0.98:8080/cotxe/updateMarca?id=';
 
 constructor(private http: Http){}
 
-updateMarca(addId,addName,addConce,addCountry,addYear){     
-        var creds = "id=" + addId +  "&name=" + addName + "&idConce=" + addConce + "&pais=" + addCountry + "&any=" + addYear;
+updateMarca(addId,addName,addTel,addCountry,addMail){     
+        var creds = "id=" + addId +  "&name=" + addName + "&telefon=" + addTel + "&pais=" + addCountry + "&correu=" + addMail;
         
         var headers = new Headers();       
         headers.append('Access-Control-Allow-Origin', '*');       
 
-        var a = this.http.put('http://localhost:8080/cotxe/updateMarca?id='+addId+'&name='+addName+ "&idConce=" + addConce + "&pais=" + addCountry + "&any=" + addYear,creds,{
+        var a = this.http.put(this.updateUrl+addId+'&name='+addName+ "&telefon=" + addTel + "&pais=" + addCountry + "&correu=" + addMail,creds,{
             headers:headers
         })
                     .map(res => res.json());

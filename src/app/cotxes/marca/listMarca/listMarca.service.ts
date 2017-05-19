@@ -10,14 +10,12 @@ import {sprintf} from "sprintf-js";
 @Injectable()
 
 export class ListMarcaService{
-private cotxeUrl = 'http://localhost:8080/cotxe/listMarca';
-private modelUrl = 'http://localhost:8080/cotxe/getModel?id=';
-private marcaUrl = 'http://localhost:8080/cotxe/addMarca?id=%ld&nom=%s&idConce=%ld&pais=%s&any=%ld';
+private listUrl = 'http://172.17.0.98:8080/cotxe/listMarca';
 
 constructor(private http: Http){}
 
 getMarques() {
-      var a = this.http.get(this.cotxeUrl)
+      var a = this.http.get(this.listUrl)
                 .map(res => res.json())
       return a;
   }
