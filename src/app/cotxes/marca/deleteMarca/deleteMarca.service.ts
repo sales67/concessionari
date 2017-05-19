@@ -9,7 +9,7 @@ import {sprintf} from "sprintf-js";
 
 @Injectable()
 
-export class AddMarcaService{
+export class DeleteMarcaService{
 private cotxeUrl = 'http://localhost:8080/cotxe/listMarca';
 private modelUrl = 'http://localhost:8080/cotxe/getModel?id=';
 private marcaUrl = 'http://localhost:8080/cotxe/addMarca?id=%ld&nom=%s&idConce=%ld&pais=%s&any=%ld';

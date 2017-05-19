@@ -5,6 +5,10 @@ import { MarcaComponent } from './marca/marca.component';
 import { EquipamentComponent } from './equipament/equipament.component';
 import { ModelComponent } from './model/model.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { AddMarcaComponent } from './marca/addMarca/addMarca.component';
+import { UpdateMarcaComponent } from './marca/updateMarca/updateMarca.component';
+import { DeleteMarcaComponent } from './marca/deleteMarca/deleteMarca.component';
+import { ListMarcaComponent } from './marca/listMarca/listMarca.component';
 import { FormsModule } from '@angular/forms';
 import { HttpModule,Http} from '@angular/http';
 import { RegistComponent } from './client/regist/regist.component';
@@ -25,9 +29,16 @@ import { DeleteComponent } from './client/delete/delete.component';
       MarcaComponent,
       EquipamentComponent,
       ModelComponent,
+<<<<<<< HEAD
       RegistComponent,
       UpdateComponent,
       DeleteComponent,
+=======
+      AddMarcaComponent,
+      UpdateMarcaComponent,
+      ListMarcaComponent,
+      DeleteMarcaComponent
+>>>>>>> 5f52f909119bc9337bac3604e639b9ce5917c9d3
   ]
 })
 export class CotxesModule { }
