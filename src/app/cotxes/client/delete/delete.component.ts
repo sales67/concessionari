@@ -22,7 +22,7 @@ export class DeleteComponent implements OnInit {
       this.deleteService.deleteClient(this.idD)
           .subscribe(
           data => { this.deleteC = data },
-          () => console.log('done' + this.deleteC));
+          () => console.log('Has eliminat el client'));
   }
 
   ngOnInit() {

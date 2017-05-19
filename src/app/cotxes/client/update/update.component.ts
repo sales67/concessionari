@@ -23,7 +23,7 @@ export class UpdateComponent implements OnInit {
             this.correuU, this.direccioU, this.telefonU)
             .subscribe(
             data => { this.updateC = data },
-            () => console.log('done' + this.updateC));
+            () => console.log('Has modificat el client' + this.nomU));
     }
 
     ngOnInit() {
