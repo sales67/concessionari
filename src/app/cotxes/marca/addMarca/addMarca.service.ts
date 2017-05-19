@@ -10,23 +10,24 @@ import {sprintf} from "sprintf-js";
 @Injectable()
 
 export class AddMarcaService{
-private cotxeUrl = 'http://localhost:8080/cotxe/listMarca';
-private modelUrl = 'http://localhost:8080/cotxe/getModel?id=';
-private marcaUrl = 'http://localhost:8080/cotxe/addMarca?id=%ld&nom=%s&idConce=%ld&pais=%s&any=%ld';
+private addUrl = 'http://172.17.0.98:8080/cotxe/addMarca';
+
 
 constructor(private http: Http){}
 
-addMarcaPost(addName,addConce,addCountry,addYear){     
-        var creds = "nom=" + addName + "&idConce=" + addConce + "&pais=" + addCountry + "&any=" + addYear;
+
+
+addMarcaPost(addName,addTel,addCountry,addMail){     
+        var creds = "nom=" + addName + "&telefon=" + addTel + "&pais=" + addCountry + "&correu=" + addMail;
+
         
           var headers = new Headers();
         headers.append('Content-Type', 'application/x-www-form-urlencoded');
         
-        var a = this.http.post('http://localhost:8080/cotxe/addMarca',creds,{
+        var a = this.http.post(this.addUrl,creds,{
             headers:headers
         })
                     .map(res => res.json());
         return a; 
     }
-
 }

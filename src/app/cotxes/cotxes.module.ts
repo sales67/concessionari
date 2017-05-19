@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+﻿import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ClientComponent } from './client/client.component';
 import { MarcaComponent } from './marca/marca.component';
@@ -33,17 +33,28 @@ import { EsborrarEQComponent } from './equipament/esborrar-eq/esborrar-eq.compon
       MarcaComponent,
       EquipamentComponent,
       ModelComponent,
+
+
       RegistComponent,
       UpdateComponent,
       DeleteComponent,
+
+
+      RegistComponent,
+      UpdateComponent,
+      DeleteComponent,
+
       AddMarcaComponent,
       UpdateMarcaComponent,
       ListMarcaComponent,
+
+
       DeleteMarcaComponent,
       CrearEQComponent,
       ConsultarEQComponent,
       ModificarEQComponent,
       EsborrarEQComponent
+
   ]
 })
 export class CotxesModule { }

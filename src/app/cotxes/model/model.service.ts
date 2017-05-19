@@ -1,4 +1,4 @@
-import {Injectable}  from '@angular/core';
+﻿import {Injectable}  from '@angular/core';
 import {Http,Headers}  from '@angular/http';
 import 'rxjs/add/operator/map';
 import {Observable} from 'rxjs/Observable';
@@ -7,7 +7,7 @@ import {sprintf} from "sprintf-js";
 @Injectable()
 
 export class ModelService{
-	private baseUrl = 'http:172.17.0.242:8080/demo/';
+	/*private baseUrl = 'http:172.17.0.242:8080/demo/';
 	private modelUrl = this.baseUrl + 'getModelXmarca?marca=';
 	private listUrl = this.baseUrl + 'list';
 

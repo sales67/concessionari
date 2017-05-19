@@ -1,5 +1,4 @@
 ﻿export class Client {
-    public id: number;
     public dni: string;
     public nom: string;
     public cognoms: string;

@@ -7,7 +7,7 @@ import {Routes,Router} from '@angular/router';
 @Component({
   selector: 'deleteMarca',
   templateUrl:'./deleteMarca.component.html',
-    styleUrls: ['../marca.component.css'],
+  styleUrls: ['../../cotxes.css'],
   providers: [DeleteMarcaService]
 })
 
@@ -18,8 +18,7 @@ import {Routes,Router} from '@angular/router';
     constructor(private deleteMarcaService: DeleteMarcaService) { }
              
         deleteMarca(){  
-            this.deleteMarcaService.deleteMarca(this.deleteId)
-               .subscribe(                  
-                () => console.log('has eliminat la marca: '+this.deleteId)
-      );}
+            this.deleteMarcaService.deleteMarca(this.deleteId)               
+      
+        }
     }

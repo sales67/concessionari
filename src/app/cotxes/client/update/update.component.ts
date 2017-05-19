@@ -1,15 +1,32 @@
-import { Component, OnInit } from '@angular/core';
+﻿import { Component, OnInit } from '@angular/core';
+//import { StateService } from '../common/state.service';
+import { UpdateService } from './update.service';
+import { Http, Headers, Response } from '@angular/http';
+import { Routes } from '@angular/router';
+import { Client } from '../client';
+
 
 @Component({
-  selector: 'app-update',
-  templateUrl: './update.component.html',
-  styleUrls: ['./update.component.css']
+    selector: 'app-update',
+    templateUrl: './update.component.html',
+    styleUrls: ['./update.component.css'],
+    providers: [UpdateService]
 })
 export class UpdateComponent implements OnInit {
 
-  constructor() { }
+    idU; dniU; nomU; cognomsU; correuU; direccioU; telefonU; updateC;
 
-  ngOnInit() {
-  }
+    constructor(private updateService: UpdateService) { }
+    updateButton() {
+
+        this.updateService.updateClient(this.idU, this.dniU, this.nomU, this.cognomsU,
+            this.correuU, this.direccioU, this.telefonU)
+            .subscribe(
+            data => { this.updateC = data },
+            () => console.log('done' + this.updateC));
+    }
+
+    ngOnInit() {
+    }
 
 }

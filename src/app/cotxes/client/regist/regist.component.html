@@ -2,8 +2,8 @@
 <form name="formul">
   <div name="regist">
 
-    <label for="content">Numero identificatiu</label><br />
-    <input type="text" name="id" [(ngModel)]="idR"><br />
+    <!--<label for="content">Numero identificatiu</label><br />
+    <input type="text" name="id" [(ngModel)]="idR"><br />-->
     <label for="content">Dni</label><br />
     <input type="text" name="dni" [(ngModel)]="dniR"><br />
     <label for="content">Nom</label><br />
@@ -15,9 +15,9 @@
     <label for="content">Direccio</label><br />
     <input type="text" name="direccio" [(ngModel)]="direccioR"><br />
     <label for="content">Telefon</label><br />
-    <input type="text" name="telefon" [(ngModel)]="telefonR"><br />
+    <input type="text" name="telefon" [(ngModel)]="telefonR"><br /><br />
     
-    <button (click)="regist()" type="submit" class="btn btn-default">Registrar</button>
+    <button (click)="registButton()" type="submit" class="btn btn-default">Registrar</button>
 
   </div>
 </form>

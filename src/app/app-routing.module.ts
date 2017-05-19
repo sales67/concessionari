@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+﻿import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ClientComponent } from './cotxes/client/client.component';
@@ -46,6 +46,7 @@ const routes: Routes = [
     {
     path: 'listMarca',
     component: ListMarcaComponent
+
   }, {
     path: 'update',
     component: UpdateComponent
@@ -55,6 +56,7 @@ const routes: Routes = [
   }, {
       path: 'regist',
       component: RegistComponent
+
   },
     {
     path: 'deleteMarca',

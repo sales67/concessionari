@@ -7,18 +7,18 @@ import {Routes,Router} from '@angular/router';
 @Component({
   selector: 'UpdateMarca',
   templateUrl:'./UpdateMarca.component.html',
- styleUrls: ['../marca.component.css'],
+  styleUrls: ['../../cotxes.css'],
   providers: [UpdateMarcaService]
 })
 
     export class UpdateMarcaComponent{
         
-    addId;addName;addConce;addCountry;addYear;
+    addId;addName;addTel;addCountry;addMail;
 
     constructor(private updateMarcaService: UpdateMarcaService) { }
             
                 
-        updateMarca(){        this.updateMarcaService.updateMarca(this.addId,this.addName,this.addConce,this.addCountry,this.addYear)
+        updateMarca(){        this.updateMarcaService.updateMarca(this.addId,this.addName,this.addTel,this.addCountry,this.addMail)
                .subscribe(
                 data => { this.addName = data;},                    
                 () => console.log('has actualitzat la marca: '+this.addName)
