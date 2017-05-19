@@ -10,7 +10,7 @@ import {Model} from './model';
 @Component({
   selector: 'marca',
   templateUrl:'./marca.component.html',
-  styleUrls: ['marca.component.css'],
+  styleUrls: ['../cotxes.css'],
   providers: [MarcaService]
 })
 

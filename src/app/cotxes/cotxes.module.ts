@@ -14,6 +14,10 @@ import { HttpModule,Http} from '@angular/http';
 import { RegistComponent } from './client/regist/regist.component';
 import { UpdateComponent } from './client/update/update.component';
 import { DeleteComponent } from './client/delete/delete.component';
+import { CrearEQComponent } from './equipament/crear-eq/crear-eq.component';
+import { ConsultarEQComponent } from './equipament/consultar-eq/consultar-eq.component';
+import { ModificarEQComponent } from './equipament/modificar-eq/modificar-eq.component';
+import { EsborrarEQComponent } from './equipament/esborrar-eq/esborrar-eq.component';
 
 
 
@@ -43,8 +47,16 @@ import { DeleteComponent } from './client/delete/delete.component';
       AddMarcaComponent,
       UpdateMarcaComponent,
       ListMarcaComponent,
+<<<<<<< HEAD
       DeleteMarcaComponent
 
+=======
+      DeleteMarcaComponent,
+      CrearEQComponent,
+      ConsultarEQComponent,
+      ModificarEQComponent,
+      EsborrarEQComponent
+>>>>>>> 201ca2cabdeb289a091f77affc6abea8c8fd97e0
   ]
 })
 export class CotxesModule { }

@@ -14,6 +14,11 @@ import { RegistComponent } from './cotxes/client/regist/regist.component';
 import { UpdateComponent } from './cotxes/client/update/update.component';
 import { DeleteComponent } from './cotxes/client/delete/delete.component';
 
+import { CrearEQComponent } from './cotxes/equipament/crear-eq/crear-eq.component';
+import { ConsultarEQComponent } from './cotxes/equipament/consultar-eq/consultar-eq.component';
+import { ModificarEQComponent } from './cotxes/equipament/modificar-eq/modificar-eq.component';
+import { EsborrarEQComponent } from './cotxes/equipament/esborrar-eq/esborrar-eq.component';
+
 
 const routes: Routes = [
   {
@@ -56,8 +61,24 @@ const routes: Routes = [
     {
     path: 'deleteMarca',
     component: DeleteMarcaComponent
+<<<<<<< HEAD
 
+=======
+  },{
+    path: 'crear-eq',
+    component: CrearEQComponent
+  },{
+    path: 'consultar-eq',
+    component: ConsultarEQComponent
+  },{
+    path: 'modificar-eq',
+    component: ModificarEQComponent
+  },{
+    path: 'esborrar-eq',
+    component: EsborrarEQComponent
+>>>>>>> 201ca2cabdeb289a091f77affc6abea8c8fd97e0
   }
+    
 ];
 
 @NgModule({
