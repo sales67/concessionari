@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { Http, Headers, Response } from '@angular/http';
-import { Routes, Router } from '@angular/router';
+// import { Observable } from 'rxjs/Observable';
+// import { Http, Headers, Response } from '@angular/http';
+// import { Routes, Router } from '@angular/router';
 import { Equipament } from './equipament';
 import { EquipamentService } from './equipament.service';
 
