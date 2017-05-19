@@ -1,15 +1,40 @@
 import { Component, OnInit } from '@angular/core';
+import { Equipament } from '../equipament';
+import { EquipamentService } from '../equipament.service';
 
 @Component({
   selector: 'app-consultar-eq',
   templateUrl: './consultar-eq.component.html',
-  styleUrls: ['./consultar-eq.component.css']
+  styleUrls: ['./consultar-eq.component.css'],
+  providers: [EquipamentService]
 })
 export class ConsultarEQComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+    idEq: number;
+    equipament: Equipament;
+    public equipaments: Array<Equipament> = [];
+    
+    constructor( private equipamentService: EquipamentService) { }
+    
+    ngOnInit() {
+        this.equipament = this.equipamentService.equipamentBuit();
+    }
+    
+    trobaEquipament() {
+        this.equipamentService.getEq(this.idEq)
+            .subscribe(
+                data => { this.equipament = data; console.log(data); },
+                err => console.error(err),
+                () => console.log('done')
+            );
+    }
+    
+    trobaEquipaments() {
+        this.equipamentService.getEqs()
+                .subscribe(
+                    data => { this.equipaments = data; console.log(data); },
+                    err => console.error(err),
+                    () => console.log('done')
+        );
+    }
 }
