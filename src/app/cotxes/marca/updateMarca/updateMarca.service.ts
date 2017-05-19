@@ -16,6 +16,17 @@ private marcaUrl = 'http://localhost:8080/cotxe/addMarca?id=%ld&nom=%s&idConce=%
 
 constructor(private http: Http){}
 
+updateMarca(addId,addName,addConce,addCountry,addYear){     
+        var creds = "id=" + addId +  "&name=" + addName + "&idConce=" + addConce + "&pais=" + addCountry + "&any=" + addYear;
+        
+        var headers = new Headers();       
+        headers.append('Access-Control-Allow-Origin', '*');       
 
+        var a = this.http.put('http://localhost:8080/cotxe/updateMarca?id='+addId+'&name='+addName+ "&idConce=" + addConce + "&pais=" + addCountry + "&any=" + addYear,creds,{
+            headers:headers
+        })
+                    .map(res => res.json());
+    return a;
+    }
 
 }
