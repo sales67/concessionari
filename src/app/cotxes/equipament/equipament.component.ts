@@ -15,11 +15,11 @@ export class EquipamentComponent implements OnInit {
     
     idEq: number;
     equipament: Equipament;
+    public equipaments: Array<Equipament> = [];
     
     constructor( private equipamentService: EquipamentService) { }
     
     ngOnInit() {
-        // this.conces = this.dadesService.getNouConce();
         this.equipament = this.equipamentService.equipamentBuit();
     }
     
@@ -30,5 +30,14 @@ export class EquipamentComponent implements OnInit {
                 err => console.error(err),
                 () => console.log('done')
             );
+    }
+    
+    trobaEquipaments() {
+        this.equipamentService.getEqs()
+                .subscribe(
+                    data => { this.equipaments = data; console.log(data); },
+                    err => console.error(err),
+                    () => console.log('done')
+        );
     }
 }

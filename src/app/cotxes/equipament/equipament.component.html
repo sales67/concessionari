@@ -3,18 +3,6 @@
     <br>
 
     <h2>Introdueix l'ID d'un <strong>equipament</strong> per saber la seva informació:</h2>
-
-    <!--<form name="getConce">
-        <label for="idConce">ID: </label>
-        <input type="text" name="idConce" id="idConce" [(ngModel)]="idConce"> <br> <br>
-        <button (click)="trobaConce()" type="submit" class="btn btn-success">Submit</button>
-    </form>
-
-    <p>ID: {{conces.id}}</p>
-    <p>Nom: {{conces.name}}</p>
-    <p>Població: {{conces.poblacio}}</p>
-    <p>Adreça: {{conces.adresa}}</p>
-    <p>Telèfon: {{conces.telefon}}</p>-->
     
     <form name="getEquipament">
         <label for="idEq">ID: </label>
@@ -38,4 +26,28 @@
 
     <br>
     
+<div class="groc">
+    <br>
+
+        <h2>Clica el botó per veure tots els equipaments:</h2>
+
+        <button (click)="trobaEquipaments()" type="submit" class="btn btn-default">Submit</button><br>
+
+        <div *ngFor='let eq of equipaments'>
+            <p>ID: {{eq.id}}</p>
+            <p>Nom: {{eq.name}}</p>
+            <p>Potència: {{eq.potencia}}</p>
+            <p>Tracció: {{eq.traccio}}</p>
+            <p>Climatitzador: {{eq.climatitzador}}</p>
+            <p>Llantes de 17": {{eq.llantes17}}</p>
+            <p>Llantes de 18": {{eq.llantes18}}</p>
+            <p>Llantes de 19": {{eq.llantes19}}</p>
+            <p>Navegador: {{eq.navegador}}</p>
+            <p>Pintura metalitzada": {{eq.pintura}}</p>
+            <p>Equip multimèdia de 6": {{eq.multimedia6}}</p>
+            <p>Equip multimèdia de 9": {{eq.multimedia9}}</p>
+            <br>
+        </div>
+
+    <br>
 </div>
