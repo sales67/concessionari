@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ClientComponent } from './cotxes/client/client.component';
+import {AddMarcaComponent} from './cotxes/marca/addMarca/addMarca.component';
+import {UpdateMarcaComponent} from './cotxes/marca/updateMarca/updateMarca.component';
+import {ListMarcaComponent} from './cotxes/marca/listMarca/listMarca.component';
+import {DeleteMarcaComponent} from './cotxes/marca/deleteMarca/deleteMarca.component';
 import { MarcaComponent } from './cotxes/marca/marca.component';
 import { ModelComponent } from './cotxes/model/model.component';
 import { EquipamentComponent } from './cotxes/equipament/equipament.component';
@@ -20,18 +24,22 @@ const routes: Routes = [
   }, {
     path: 'equipament',
     component: EquipamentComponent
-  }, {
+  },
+    {
     path: 'addMarca',
-    component: EquipamentComponent
-  }, {
+    component: AddMarcaComponent
+  },
+    {
     path: 'updateMarca',
-    component: EquipamentComponent
-  }, {
+    component: UpdateMarcaComponent
+  },
+    {
     path: 'listMarca',
-    component: EquipamentComponent
-  }, {
+    component: ListMarcaComponent
+  },
+    {
     path: 'deleteMarca',
-    component: EquipamentComponent
+    component: DeleteMarcaComponent
   }
 ];
 
