@@ -47,16 +47,14 @@ import { EsborrarEQComponent } from './equipament/esborrar-eq/esborrar-eq.compon
       AddMarcaComponent,
       UpdateMarcaComponent,
       ListMarcaComponent,
-<<<<<<< HEAD
-      DeleteMarcaComponent
 
-=======
+
       DeleteMarcaComponent,
       CrearEQComponent,
       ConsultarEQComponent,
       ModificarEQComponent,
       EsborrarEQComponent
->>>>>>> 201ca2cabdeb289a091f77affc6abea8c8fd97e0
+
   ]
 })
 export class CotxesModule { }

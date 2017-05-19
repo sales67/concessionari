@@ -61,9 +61,6 @@ const routes: Routes = [
     {
     path: 'deleteMarca',
     component: DeleteMarcaComponent
-<<<<<<< HEAD
-
-=======
   },{
     path: 'crear-eq',
     component: CrearEQComponent
@@ -76,7 +73,6 @@ const routes: Routes = [
   },{
     path: 'esborrar-eq',
     component: EsborrarEQComponent
->>>>>>> 201ca2cabdeb289a091f77affc6abea8c8fd97e0
   }
     
 ];
