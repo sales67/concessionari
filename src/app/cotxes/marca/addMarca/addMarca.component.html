@@ -1,3 +1,15 @@
 <html>
     AFEGIR MARQUES
+    <form name="addMarca" display="block">      
+            <h2>Introdueix una nova Marca de cotxes</h2>
+		        <label for="content">Entra la Id del Concessionari    </label><br>
+		        <input type="text" name="addMarca" [(ngModel)]="addConce"><br>
+            <label for="content">Entra el nom de la Marca   </label><br>
+		        <input type="text" name="addMarca" [(ngModel)]="addName"><br>
+            <label for="content">Entra l'any actual     </label><br>
+		        <input type="text" name="addMarca" [(ngModel)]="addYear"><br>
+            <label for="content">Entra el Païs de la Marca</label><br>
+		        <input type="text" name="addMarca" [(ngModel)]="addCountry"><br><br>
+		        <button (click)="addMarcaPost()" type="submit" class="btn btn-default">Envia per introduïr una marca</button>
+    </form>	
 </html>

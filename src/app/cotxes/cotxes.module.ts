@@ -1,4 +1,4 @@
-﻿import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ClientComponent } from './client/client.component';
 import { MarcaComponent } from './marca/marca.component';
@@ -29,16 +29,13 @@ import { DeleteComponent } from './client/delete/delete.component';
       MarcaComponent,
       EquipamentComponent,
       ModelComponent,
-<<<<<<< HEAD
       RegistComponent,
       UpdateComponent,
       DeleteComponent,
-=======
       AddMarcaComponent,
       UpdateMarcaComponent,
       ListMarcaComponent,
       DeleteMarcaComponent
->>>>>>> 5f52f909119bc9337bac3604e639b9ce5917c9d3
   ]
 })
 export class CotxesModule { }
