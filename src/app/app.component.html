@@ -1,4 +1,4 @@
-﻿<html>
+<html>
     <head>
         <style>
 html {background-color: skyblue;}
@@ -27,7 +27,15 @@ html {background-color: skyblue;}
             </ul>
         </li>
         <li><a href="#" routerLink="/model" routerLinkActive="active" >Model</a></li>
-        <li><a href="#" routerLink="/equipament" routerLinkActive="active" >Equipaments</a></li>
+        <!-- <li><a href="#" routerLink="/equipament" routerLinkActive="active" >Equipaments</a></li> -->
+        <li class="has-sub "><a routerLink="/equipament" routerLinkActive="active">Equipament</a>
+            <ul>
+                <li><a routerLink="crear-eq" routerLinkActive="active">Crear</a></li>
+                <li><a routerLink="modificar-eq" routerLinkActive="active">Modificar</a></li>
+                <li><a routerLink="consultar-eq" routerLinkActive="active">Consultar</a></li>
+                <li><a class="delete" routerLink="esborrar-eq" routerLinkActive="active">Esborrar</a></li>
+            </ul>
+        </li>
         </ul>
     </div>
     
