@@ -38,4 +38,20 @@ export class EquipamentService {
       
         return a;
     }
+
+    crearEquipamentPost(nom, combustible, potencia, traccio, clima, llantes17, llantes18, llantes19, navegador, pintura, multi6, multi9) {
+        
+        var creds = "name=" + nom + "&combustible=" + combustible + "&potencia=" + potencia + "&traccio=" + traccio + "&climatitzador=" + clima +
+                     "&llantes17=" + llantes17 + "&llantes18=" + llantes18 + "&llantes19=" + llantes19 + "&navegador=" + navegador +
+                     "&pintura=" + pintura  + "&multi6=" + multi6  + "&multi9=" + multi9;
+        
+        var headers = new Headers();
+        headers.append('Content-Type', 'application/x-www-form-urlencoded');
+        
+        var a = this.http.post(this.myURL + '/demo/add?', creds, {
+            headers:headers
+        }).map(res => res.json());
+        
+        return a;
+    }
 }
