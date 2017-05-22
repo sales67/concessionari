@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+﻿import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ClientComponent } from './cotxes/client/client.component';
@@ -21,8 +21,13 @@ import { ModificarEQComponent } from './cotxes/equipament/modificar-eq/modificar
 import { EsborrarEQComponent } from './cotxes/equipament/esborrar-eq/esborrar-eq.component';
 import {ListMarcaIdComponent} from './cotxes/marca/listMarca/listMarcaId/listMarcaId.component';
 import {ListMarcaNameComponent} from './cotxes/marca/listMarca/listMarcaName/listMarcaName.component';
-import {ListMarcaAllComponent} from './cotxes/marca/listMarca/listMarcaAll/listMarcaAll.component';
+import { ListMarcaAllComponent } from './cotxes/marca/listMarca/listMarcaAll/listMarcaAll.component';
 
+import { InformacioComponent } from './cotxes/informacio/informacio.component';
+import { NoticiesComponent } from './cotxes/informacio/noticies/noticies.component';
+import { ContacteComponent } from './cotxes/informacio/informacio-empresa/contacte/contacte.component';
+import { UbicacioComponent } from './cotxes/informacio/informacio-empresa/ubicacio/ubicacio.component';
+import { InformacioEmpresaComponent } from './cotxes/informacio/informacio-empresa/informacio-empresa.component';
 
 
 const routes: Routes = [
@@ -92,7 +97,24 @@ const routes: Routes = [
   },{
     path: 'esborrar-eq',
     component: EsborrarEQComponent
+  }, {
+      path: 'informacio',
+      component: InformacioComponent
+  }, {
+      path: 'informacio-empresa',
+      component: InformacioEmpresaComponent
   }
+    , {
+      path: 'contacte',
+      component: ContacteComponent
+  }
+    , {
+        path: 'ubicacio',
+        component: UbicacioComponent
+    }, {
+        path: 'noticies',
+        component: NoticiesComponent
+    }
     
 ];
 
