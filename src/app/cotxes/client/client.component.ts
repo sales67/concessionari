@@ -16,6 +16,7 @@ export class ClientComponent implements OnInit {
 
     id;
     clients;//es la variable del for
+    telefonClient;
     
 
     constructor(private clientService: ClientService) { }
@@ -25,6 +26,13 @@ export class ClientComponent implements OnInit {
             data => { this.clients = data; console.log(data); },
             () => console.log('done'));
     }
+
+    listButtonId() {
+        this.clientService.listClient(this.telefonClient).subscribe(
+            data => { this.clients = data; console.log(data); },
+            () => console.log('done'));
+    }
+
     ngOnInit() {
         
     }

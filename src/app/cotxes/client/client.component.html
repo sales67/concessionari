@@ -1,6 +1,10 @@
-﻿
-
-  <button (click)="listButton()" class="btn btn-default">Mostra tots els clients</button>
+﻿<button (click)="listButton()" class="btn btn-default">Mostrar tots els clients</button>
+<form name="telefonClient">
+  <button (click)="listButtonId()" type="submit" class="btn btn-success">Mostrar client</button><br />
+  <label for="telefonClient">Telefon del client: </label>
+  <input type="text" name="telefonClient" [(ngModel)]="telefonClient"> <br>
+</form>
+  
   <div>
           <div *ngFor='let client of clients'>
             -->-->-->-->-->-->-->-->-->-->-->-->-->-->-->-->
@@ -24,6 +28,12 @@
               <p>Telefon: {{client.telefon}} </p> 
             <br />
             <br />
+            
+
          </div>
   </div>
-  
+<br />
+<br />
+<br />
+
+
