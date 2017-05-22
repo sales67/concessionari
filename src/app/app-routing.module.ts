@@ -23,15 +23,12 @@ import {ListMarcaIdComponent} from './cotxes/marca/listMarca/listMarcaId/listMar
 import {ListMarcaNameComponent} from './cotxes/marca/listMarca/listMarcaName/listMarcaName.component';
 import { ListMarcaAllComponent } from './cotxes/marca/listMarca/listMarcaAll/listMarcaAll.component';
 
-<<<<<<< HEAD
-// imports de Model
-=======
+
 import { InformacioComponent } from './cotxes/informacio/informacio.component';
 import { NoticiesComponent } from './cotxes/informacio/noticies/noticies.component';
 import { ContacteComponent } from './cotxes/informacio/informacio-empresa/contacte/contacte.component';
 import { UbicacioComponent } from './cotxes/informacio/informacio-empresa/ubicacio/ubicacio.component';
 import { InformacioEmpresaComponent } from './cotxes/informacio/informacio-empresa/informacio-empresa.component';
->>>>>>> 2db6bb67eb9ab3940eea4c40feda9727ee19f8f7
 
 import { addModelComponent } from './cotxes/model/add-model/addModel.component';
 import { deleteModelComponent } from './cotxes/model/delete-model/deleteModel.component';
@@ -105,7 +102,6 @@ const routes: Routes = [
   },{
     path: 'esborrar-eq',
     component: EsborrarEQComponent
-<<<<<<< HEAD
   },
   {
     path: 'addModel',
@@ -122,7 +118,6 @@ const routes: Routes = [
   {
     path: 'updateModel',
     component: updateModelComponent
-=======
   }, {
       path: 'informacio',
       component: InformacioComponent
@@ -133,7 +128,6 @@ const routes: Routes = [
     , {
       path: 'contacte',
       component: ContacteComponent
->>>>>>> 2db6bb67eb9ab3940eea4c40feda9727ee19f8f7
   }
     , {
         path: 'ubicacio',

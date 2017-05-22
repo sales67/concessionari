@@ -74,19 +74,16 @@ import { updateModelComponent } from './model/update-model/updateModel.component
       ModificarEQComponent,
       EsborrarEQComponent,
       InformacioComponent,
-<<<<<<< HEAD
 
        addModelComponent,
        deleteModelComponent,
        listModelComponent,
-       updateModelComponent
+       updateModelComponent,
 
-=======
       InformacioEmpresaComponent,
       NoticiesComponent,
       ContacteComponent,
       UbicacioComponent
->>>>>>> 2db6bb67eb9ab3940eea4c40feda9727ee19f8f7
 
   ]
 })
