@@ -8,7 +8,7 @@ import {sprintf} from "sprintf-js";
 @Injectable()
 
 export class updateModelService{
-private updateUrl = 'http://172.17.0.98:8080/demo/update?id=';
+private updateUrl = 'http://172.17.0.242:8080/demo/update?id=';
 
 constructor(private http: Http){}
 
