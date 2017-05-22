@@ -3,7 +3,7 @@ import {addModelService} from './addModel.service';
 @Component({
   selector: 'app-model',
   templateUrl: './addModel.component.html',
-  //styleUrls: ['./addModel.component.css'],
+  styleUrls: ['./addModel.component.css'],
   providers: [addModelService]
 })
 export class addModelComponent implements OnInit {

@@ -7,7 +7,7 @@ import {Routes,Router} from '@angular/router';
 @Component({
   selector: 'deleteModel',
   templateUrl:'./deleteModel.component.html',
-  //styleUrls: ['../../cotxes.css'],
+  styleUrls: ['../../cotxes.css'],
   providers: [deleteModelService]
 })
 
