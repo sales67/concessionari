@@ -1,4 +1,4 @@
-﻿import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ClientComponent } from './cotxes/client/client.component';
@@ -18,6 +18,7 @@ import { CrearEQComponent } from './cotxes/equipament/crear-eq/crear-eq.componen
 import { ConsultarEQComponent } from './cotxes/equipament/consultar-eq/consultar-eq.component';
 import { ModificarEQComponent } from './cotxes/equipament/modificar-eq/modificar-eq.component';
 import { EsborrarEQComponent } from './cotxes/equipament/esborrar-eq/esborrar-eq.component';
+import {MarcaModule} from './cotxes/marca/marca.module';
 
 
 const routes: Routes = [
@@ -45,7 +46,7 @@ const routes: Routes = [
   },
     {
     path: 'listMarca',
-    component: ListMarcaComponent
+    component: ListMarcaComponent,
 
   }, {
     path: 'update',
