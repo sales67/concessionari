@@ -58,7 +58,6 @@ const routes: Routes = [
   }, {
       path: 'regist',
       component: RegistComponent
-
   },
     {
     path: 'deleteMarca',
