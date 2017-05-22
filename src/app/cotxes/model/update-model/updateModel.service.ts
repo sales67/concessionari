@@ -12,7 +12,7 @@ private updateUrl = 'http://172.17.0.98:8080/demo/update?id=';
 
 constructor(private http: Http){}
 
-updateMarca(addId,addName,addMarca){     
+updateModel(addId,addName,addMarca){     
         var creds = "id=" + addId +  "&name=" + addName + "&marca=" + addMarca;
         
         var headers = new Headers();       
