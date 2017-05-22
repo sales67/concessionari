@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+﻿import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-noticies',
@@ -6,8 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./noticies.component.css']
 })
 export class NoticiesComponent implements OnInit {
-
-  constructor() { }
+    fullImagePath: string;
+    constructor() {
+        this.fullImagePath = '../../../../../assets/ferrari-422.jpg';
+    }
+    getImageUrl() {
+       return this.fullImagePath = './ferrari-420.jpg';
+    }
 
   ngOnInit() {
   }
