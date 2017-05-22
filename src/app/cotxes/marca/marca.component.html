@@ -6,9 +6,12 @@
 	</head>
 	<body>
         <h2>Que vols fer?</h2>
-        <button onclick="location.href = '/addMarca';">afegir una marca</button>
-        <button onclick="location.href = '/updateMarca';">actualitzar una marca</button>
-        <button onclick="location.href = '/listMarca';">mostrar una marca</button>
-        <button onclick="location.href = '/deleteMarca';">esborrar una marca</button>
+       
+        
+        
+       <button><a routerLink="../addMarca" routerLinkActive="active">Afegir una marca</a></button>
+        <button><a routerLink="../updateMarca" routerLinkActive="active">Actualitzar una marca</a></button>
+        <button><a routerLink="../listMarca" routerLinkActive="active">Llistar una marca</a></button>
+        <button><a routerLink="../deleteMarca" routerLinkActive="active">Esborrar una marca</a></button>
     </body>
 </html>
