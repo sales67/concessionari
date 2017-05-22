@@ -20,7 +20,7 @@ import {Routes,Router} from '@angular/router';
     constructor(private updateModelService: updateModelService) { }
             
                 
-        updateMarca(){        this.updateModelService.updateModel(this.addId,this.addName,this.addTel,this.addCountry,this.addMail)
+        updateModel(){        this.updateModelService.updateModel(this.addId,this.addName,this.addMarca)
                .subscribe(
                 data => { this.addName = data;},                    
                 () => console.log('has actualitzat el model: '+this.addName)

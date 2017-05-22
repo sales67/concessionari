@@ -12,7 +12,7 @@ private delUrl = 'http://localhost:172.17.0.242/demo/remove?id=';
 
 constructor(private http: Http){}
     
-deleteMarca(deleteId){ 
+deleteModel(deleteId){ 
         var a = this.http.delete(this.delUrl+ deleteId);
     }
 

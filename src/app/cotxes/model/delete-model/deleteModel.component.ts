@@ -17,7 +17,7 @@ import {Routes,Router} from '@angular/router';
 
     constructor(private deleteModelService: deleteModelService) { }
              
-        deleteMarca(){  
+        deleteModel(){  
             this.deleteModelService.deleteModel(this.deleteId)               
       
         }

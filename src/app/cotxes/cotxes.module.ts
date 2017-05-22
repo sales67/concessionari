@@ -31,6 +31,11 @@ import { NoticiesComponent } from './informacio/noticies/noticies.component';
 import { ContacteComponent } from './informacio/informacio-empresa/contacte/contacte.component';
 import { UbicacioComponent } from './informacio/informacio-empresa/ubicacio/ubicacio.component';
 
+import { addModelComponent } from './model/add-model/addModel.component';
+import { deleteModelComponent } from './model/delete-model/deleteModel.component';
+import { listModelComponent } from './model/list-model/listModel.component';
+import { updateModelComponent } from './model/update-model/updateModel.component';
+
 
 @NgModule({
   imports: [
@@ -69,6 +74,12 @@ import { UbicacioComponent } from './informacio/informacio-empresa/ubicacio/ubic
       ModificarEQComponent,
       EsborrarEQComponent,
       InformacioComponent,
+
+       addModelComponent,
+       deleteModelComponent,
+       listModelComponent,
+       updateModelComponent,
+
       InformacioEmpresaComponent,
       NoticiesComponent,
       ContacteComponent,
