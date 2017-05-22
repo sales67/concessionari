@@ -26,6 +26,10 @@ import { InformacioComponent } from './informacio/informacio.component';
 import { ListMarcaIdComponent } from './marca/listMarca/listMarcaId/listMarcaId.component';
 import { ListMarcaNameComponent } from './marca/listMarca/listMarcaName/listMarcaName.component';
 import {ListMarcaAllComponent} from './marca/listMarca/listMarcaAll/listMarcaAll.component';
+import { InformacioEmpresaComponent } from './informacio/informacio-empresa/informacio-empresa.component';
+import { NoticiesComponent } from './informacio/noticies/noticies.component';
+import { ContacteComponent } from './informacio/informacio-empresa/contacte/contacte.component';
+import { UbicacioComponent } from './informacio/informacio-empresa/ubicacio/ubicacio.component';
 
 import { addModelComponent } from './model/add-model/addModel.component';
 import { deleteModelComponent } from './model/delete-model/deleteModel.component';
@@ -70,12 +74,19 @@ import { updateModelComponent } from './model/update-model/updateModel.component
       ModificarEQComponent,
       EsborrarEQComponent,
       InformacioComponent,
+<<<<<<< HEAD
 
        addModelComponent,
        deleteModelComponent,
        listModelComponent,
        updateModelComponent
 
+=======
+      InformacioEmpresaComponent,
+      NoticiesComponent,
+      ContacteComponent,
+      UbicacioComponent
+>>>>>>> 2db6bb67eb9ab3940eea4c40feda9727ee19f8f7
 
   ]
 })

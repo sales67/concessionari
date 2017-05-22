@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+﻿import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ClientComponent } from './cotxes/client/client.component';
@@ -21,9 +21,17 @@ import { ModificarEQComponent } from './cotxes/equipament/modificar-eq/modificar
 import { EsborrarEQComponent } from './cotxes/equipament/esborrar-eq/esborrar-eq.component';
 import {ListMarcaIdComponent} from './cotxes/marca/listMarca/listMarcaId/listMarcaId.component';
 import {ListMarcaNameComponent} from './cotxes/marca/listMarca/listMarcaName/listMarcaName.component';
-import {ListMarcaAllComponent} from './cotxes/marca/listMarca/listMarcaAll/listMarcaAll.component';
+import { ListMarcaAllComponent } from './cotxes/marca/listMarca/listMarcaAll/listMarcaAll.component';
 
+<<<<<<< HEAD
 // imports de Model
+=======
+import { InformacioComponent } from './cotxes/informacio/informacio.component';
+import { NoticiesComponent } from './cotxes/informacio/noticies/noticies.component';
+import { ContacteComponent } from './cotxes/informacio/informacio-empresa/contacte/contacte.component';
+import { UbicacioComponent } from './cotxes/informacio/informacio-empresa/ubicacio/ubicacio.component';
+import { InformacioEmpresaComponent } from './cotxes/informacio/informacio-empresa/informacio-empresa.component';
+>>>>>>> 2db6bb67eb9ab3940eea4c40feda9727ee19f8f7
 
 import { addModelComponent } from './cotxes/model/add-model/addModel.component';
 import { deleteModelComponent } from './cotxes/model/delete-model/deleteModel.component';
@@ -97,6 +105,7 @@ const routes: Routes = [
   },{
     path: 'esborrar-eq',
     component: EsborrarEQComponent
+<<<<<<< HEAD
   },
   {
     path: 'addModel',
@@ -113,7 +122,26 @@ const routes: Routes = [
   {
     path: 'updateModel',
     component: updateModelComponent
+=======
+  }, {
+      path: 'informacio',
+      component: InformacioComponent
+  }, {
+      path: 'informacio-empresa',
+      component: InformacioEmpresaComponent
   }
+    , {
+      path: 'contacte',
+      component: ContacteComponent
+>>>>>>> 2db6bb67eb9ab3940eea4c40feda9727ee19f8f7
+  }
+    , {
+        path: 'ubicacio',
+        component: UbicacioComponent
+    }, {
+        path: 'noticies',
+        component: NoticiesComponent
+    }
     
 ];
 
