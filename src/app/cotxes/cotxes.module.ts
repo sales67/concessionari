@@ -19,7 +19,8 @@ import { ConsultarEQComponent } from './equipament/consultar-eq/consultar-eq.com
 import { ModificarEQComponent } from './equipament/modificar-eq/modificar-eq.component';
 import { EsborrarEQComponent } from './equipament/esborrar-eq/esborrar-eq.component';
 import {AppRoutingModule} from '../app-routing.module';
-
+import { ListMarcaIdComponent } from './marca/listMarca/listMarcaId/listMarcaId.component';
+import { ListMarcaNameComponent } from './marca/listMarca/listMarcaName/listMarcaName.component';
 
 @NgModule({
   imports: [
@@ -47,6 +48,8 @@ import {AppRoutingModule} from '../app-routing.module';
       AddMarcaComponent,
       UpdateMarcaComponent,
       ListMarcaComponent,
+      ListMarcaIdComponent,
+      ListMarcaNameComponent,      
 
 
       DeleteMarcaComponent,
