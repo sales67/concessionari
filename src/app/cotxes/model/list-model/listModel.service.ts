@@ -7,13 +7,15 @@ import {sprintf} from "sprintf-js";
 
 @Injectable()
 
-export class deleteModelService{
-private delUrl = 'http://localhost:172.17.0.242/demo/remove?id=';
+export class listModelService{
+private listUrl = 'http://172.17.0.98:8080/demo/list';
 
 constructor(private http: Http){}
 
-deleteMarca(deleteId){ 
-        var a = this.http.delete(this.delUrl+ deleteId);
-    }
+getModels() {
+      var a = this.http.get(this.listUrl)
+                .map(res => res.json())
+      return a;
+  }
 
 }
