@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+﻿import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ClientComponent } from './client/client.component';
 import { MarcaComponent } from './marca/marca.component';
@@ -18,15 +18,15 @@ import { CrearEQComponent } from './equipament/crear-eq/crear-eq.component';
 import { ConsultarEQComponent } from './equipament/consultar-eq/consultar-eq.component';
 import { ModificarEQComponent } from './equipament/modificar-eq/modificar-eq.component';
 import { EsborrarEQComponent } from './equipament/esborrar-eq/esborrar-eq.component';
-<<<<<<< HEAD
+
 import {AppRoutingModule} from '../app-routing.module';
 import { InformacioComponent } from './informacio/informacio.component';
 
-=======
-import {AppRoutingModule} from '../app-routing.module';
+
 import { ListMarcaIdComponent } from './marca/listMarca/listMarcaId/listMarcaId.component';
 import { ListMarcaNameComponent } from './marca/listMarca/listMarcaName/listMarcaName.component';
->>>>>>> c1826732866c39749e0297908438947d9b5172ac
+import {ListMarcaAllComponent} from './marca/listMarca/listMarcaAll/listMarcaAll.component';
+
 
 @NgModule({
   imports: [
@@ -55,7 +55,8 @@ import { ListMarcaNameComponent } from './marca/listMarca/listMarcaName/listMarc
       UpdateMarcaComponent,
       ListMarcaComponent,
       ListMarcaIdComponent,
-      ListMarcaNameComponent,      
+      ListMarcaNameComponent, 
+      ListMarcaAllComponent,
 
 
       DeleteMarcaComponent,

@@ -8,19 +8,19 @@ import {Model} from './model';
 
 
 @Component({
-  selector: 'marca',
-  templateUrl:'./marca.component.html',
-  styleUrls: ['../cotxes.css'],
-  providers: [MarcaService]
+    selector: 'marca',
+    templateUrl: './marca.component.html',
+    styleUrls: ['../cotxes.css'],
+    providers: [MarcaService]
 })
 
 
-export class MarcaComponent{
+export class MarcaComponent {
     message: string;
-    errorMessage:string;
-    nom:any; 
-    marques:Marca;
-    models:Model;
+    errorMessage: string;
+    nom: any;
+    marques: Marca;
+    models: Model;
     idMarca;
     addName;
     addConce;
@@ -37,6 +37,9 @@ export class MarcaComponent{
     addConce3;
     addCountry3;
     addYear3;
-      
+
 
     constructor(private marcaService: MarcaService) { }
+
+}
+

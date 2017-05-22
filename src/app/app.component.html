@@ -50,13 +50,15 @@ html {background-color: skyblue;}
             </ul>
         </li>
           <li class="has-sub ">
-            <a routerLink="/informacio" routerLinkActive="active" href="index.html">Informació</a>
+            <a  routerLink="/informacio" routerLinkActive="active" href="index.html">Informació</a>
             <ul>
-              <li><a routerLink="/informacioEmp" routerLinkActive="active">Informació de l'Empresa</a></li>
+              <li class="has-sub ">
+                <a routerLink="/informacioEmp" routerLinkActive="active">Informació de l'Empresa</a>
                 <ul>
-                  <li class="has-sub "><a routerLink="/informacioEmp" routerLinkActive="active">Descripció i Contacte</a></li>
-                  <li><a routerLink="/informacioEmp" routerLinkActive="active">On som</a></li>              
+                  <li ><a routerLink="/informacioEmp" routerLinkActive="active">Descripció i Contacte</a></li>
+                  <li><a routerLink="/informacioEmp" routerLinkActive="active">On som</a></li>
                 </ul>
+              </li>
               <li><a routerLink="/InformacioNot" routerLinkActive="active">Noticies i Novetats</a></li>
             </ul>
           </li>

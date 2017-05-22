@@ -1,3 +1,4 @@
+﻿
 ﻿import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
@@ -8,6 +9,7 @@ import { sprintf } from "sprintf-js";
 
 
 @Injectable()
+
 
 export class MarcaService {
     constructor(private http: Http) { }
