@@ -1,0 +1,9 @@
+<h2>Llista de models</h2>
+    <button (click)="listModel()" type="submit" class="btn btn-default">Mostra tots els models</button><br>
+		            <div *ngFor='let model of models'>
+                        <p style="margin-bottom:0%">ID {{model.id}}</p>
+                        ------------------------------------  <br>                
+                        Model: {{model.model}} <br>
+                        Marca: {{model.marca}} <br>
+                        ------------------------------------ <br>
+                    </div>	

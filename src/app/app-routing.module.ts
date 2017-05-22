@@ -22,6 +22,10 @@ import { EsborrarEQComponent } from './cotxes/equipament/esborrar-eq/esborrar-eq
 import {ListMarcaIdComponent} from './cotxes/marca/listMarca/listMarcaId/listMarcaId.component';
 import {ListMarcaNameComponent} from './cotxes/marca/listMarca/listMarcaName/listMarcaName.component';
 
+//import {MarcaModule} from './cotxes/marca/marca.module';
+
+
+
 const routes: Routes = [
   {
     path: 'client',
@@ -68,7 +72,6 @@ const routes: Routes = [
   }, {
       path: 'regist',
       component: RegistComponent
-
   },
     {
     path: 'deleteMarca',

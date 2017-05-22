@@ -16,12 +16,12 @@ export class ClientService {
     constructor(private http: Http) { }
 
     
-    /*
-    getClient(id) {
-        var a = this.http.get(this.myURL + '/client/unXid?id=' + id)
+    
+    listClient(telefon) {
+        var a = this.http.get('http://172.17.0.161:8080/client/idClient?telefon=' + telefon)
             .map(res => res.json())
         return a;
-    }*/
+    }
 
     listClients(): Observable<Client[]> {
         return this.http.get(this.url).map((res: Response) => res.json());
