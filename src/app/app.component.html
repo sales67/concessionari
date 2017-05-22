@@ -7,10 +7,11 @@ html {background-color: skyblue;}
 <h1>
     {{title}}
 </h1>
+    
 
     <div id="cssmenu">
         <ul>
-          <li class="has-sub ">
+          <li class="has-sub">
             <a routerLink="/client" routerLinkActive="active" href="index.html">Client</a>
             <ul>
               <li><a routerLink="/regist" routerLinkActive="active">Registrar Client</a></li>
@@ -19,20 +20,25 @@ html {background-color: skyblue;}
               
             </ul>
           </li>
-          <li class="has-sub "><a routerLink="/marca" routerLinkActive="active">Marca</a>
+          <li class="has-sub"><a routerLink="/marca" routerLinkActive="active">Marca</a>
             <ul>
-                <li><a routerLink="addMarca" routerLinkActive="active">Afegir Marca</a></li>
-                <li><a routerLink="updateMarca" routerLinkActive="active">Actualitzar Marca</a></li>
-                <li><a routerLink="listMarca" routerLinkActive="active">Mostrar les Marques</a></li>
-                <li><a class="delete" routerLink="deleteMarca" routerLinkActive="active">Esborrar una marca</a></li>
+                <li><a routerLink="/addMarca" routerLinkActive="active">Afegir Marca</a></li>
+                <li><a routerLink="/updateMarca" routerLinkActive="active">Actualitzar Marca</a></li>
+                <li class="has-sub"><a routerLink="/listMarca" routerLinkActive="active">Mostrar les Marques</a>
+                    <ul>                        
+                        <li><a routerLink="/listMarcaId" routerLinkActive="active">Mostrar per Id</a></li>
+                        <li><a  routerLink="/listMarcaName" routerLinkActive="active">Mostrar per Nom</a></li>
+                    </ul>  
+                </li>
+                <li><a class="delete" routerLink="/deleteMarca" routerLinkActive="active">Esborrar una marca</a></li> 
             </ul>
         </li>
         <li><a href="#" routerLink="/model" routerLinkActive="active" >Model</a>
         <ul>
-            <li><a routerLink="addModel" routerLinkActive="active">Afegir Model</a></li>
-                <li><a routerLink="updateModel" routerLinkActive="active">Actualitzar Model</a></li>
-                <li><a routerLink="listModel" routerLinkActive="active">Mostrar els models</a></li>
-                <li><a class="delete" routerLink="deleteModel" routerLinkActive="active">Esborrar un model</a></li>
+            <li><a routerLink="/addModel" routerLinkActive="active">Afegir Model</a></li>
+                <li><a routerLink="/updateModel" routerLinkActive="active">Actualitzar Model</a></li>
+                <li><a routerLink="/listModel" routerLinkActive="active">Mostrar els models</a></li>
+                <li><a class="delete" routerLink="/deleteModel" routerLinkActive="active">Esborrar un model</a></li>
         </ul></li>
         <!-- <li><a href="#" routerLink="/equipament" routerLinkActive="active" >Equipaments</a></li> -->
         <li class="has-sub "><a routerLink="/equipament" routerLinkActive="active">Equipament</a>
@@ -56,8 +62,6 @@ html {background-color: skyblue;}
           </li>
       </ul>
     </div>
-    
-    
-
 <router-outlet></router-outlet>
 </html>
+

@@ -18,9 +18,15 @@ import { CrearEQComponent } from './equipament/crear-eq/crear-eq.component';
 import { ConsultarEQComponent } from './equipament/consultar-eq/consultar-eq.component';
 import { ModificarEQComponent } from './equipament/modificar-eq/modificar-eq.component';
 import { EsborrarEQComponent } from './equipament/esborrar-eq/esborrar-eq.component';
+<<<<<<< HEAD
 import {AppRoutingModule} from '../app-routing.module';
 import { InformacioComponent } from './informacio/informacio.component';
 
+=======
+import {AppRoutingModule} from '../app-routing.module';
+import { ListMarcaIdComponent } from './marca/listMarca/listMarcaId/listMarcaId.component';
+import { ListMarcaNameComponent } from './marca/listMarca/listMarcaName/listMarcaName.component';
+>>>>>>> c1826732866c39749e0297908438947d9b5172ac
 
 @NgModule({
   imports: [
@@ -48,6 +54,8 @@ import { InformacioComponent } from './informacio/informacio.component';
       AddMarcaComponent,
       UpdateMarcaComponent,
       ListMarcaComponent,
+      ListMarcaIdComponent,
+      ListMarcaNameComponent,      
 
 
       DeleteMarcaComponent,
