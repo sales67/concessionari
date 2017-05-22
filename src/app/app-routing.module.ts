@@ -8,6 +8,7 @@ import {ListMarcaComponent} from './cotxes/marca/listMarca/listMarca.component';
 import {DeleteMarcaComponent} from './cotxes/marca/deleteMarca/deleteMarca.component';
 import { MarcaComponent } from './cotxes/marca/marca.component';
 import { ModelComponent } from './cotxes/model/model.component';
+
 import { EquipamentComponent } from './cotxes/equipament/equipament.component';
 
 import { RegistComponent } from './cotxes/client/regist/regist.component';

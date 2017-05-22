@@ -3,15 +3,32 @@ import { MarcaService } from '../marca/marca.service';
 import { Http, Headers, Response } from '@angular/http';
 import { Routes, Router } from '@angular/router';
 import { Client } from './client';
+import { ClientService } from './client.service';
 
 @Component({
   selector: 'app-client',
   templateUrl: './client.component.html',
-  styleUrls: ['./client.component.css']
+  styleUrls: ['../cotxes.css'],
+  providers: [ClientService]
 })
 
-export class ClientComponent {
-    title = 'COTXES APP';
+export class ClientComponent implements OnInit {
+
+    id;
+    clients;//es la variable del for
+    
+
+    constructor(private clientService: ClientService) { }
+
+    listButton() {
+        this.clientService.listClients().subscribe(
+            data => { this.clients = data; console.log(data); },
+            () => console.log('done'));
+    }
+    ngOnInit() {
+        
+    }
+
 }
 
 

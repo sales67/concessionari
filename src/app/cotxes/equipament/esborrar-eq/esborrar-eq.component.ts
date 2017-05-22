@@ -23,13 +23,4 @@ export class EsborrarEQComponent implements OnInit {
             () => console.log('has esborrat equipament: ' + this.idEq2)
         );
     }
-    
-    /*delConce() {
-        this.dadesService.esborrarConce(this.idConce)
-        .subscribe(
-            data => { this.idConce = data;},
-            () => console.log('has esborrat el concessionari: ' + this.idConce)
-        );
-    }*/
-
 }

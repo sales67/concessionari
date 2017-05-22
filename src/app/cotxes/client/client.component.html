@@ -1,24 +1,29 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-  <link href="/src/app/cotxe/cotxe.css"
-        rel="stylesheet" type="text/css">
+﻿
+
+  <button (click)="listButton()" class="btn btn-default">Mostra tots els clients</button>
+  <div>
+          <div *ngFor='let client of clients'>
+            -->-->-->-->-->-->-->-->-->-->-->-->-->-->-->-->
+              <p>Client amb Id: {{client.id}}</p>
+            -->-->-->-->-->-->-->-->-->-->-->-->-->-->-->-->
+              <p>
+                Dni: {{client.dni}}
+              </p> 
+              <p>
+                Nom: {{client.nom}}
+              </p> 
+              <p>
+                Cognoms: {{client.cognoms}}
+              </p> 
+              <p>
+                Correu: {{client.correu}}
+              </p> 
+              <p>
+                Direccio: {{client.direccio}}
+              </p> 
+              <p>Telefon: {{client.telefon}} </p> 
+            <br />
+            <br />
+         </div>
+  </div>
   
-</head>
-<body>
-
-  
-</body>
-<!--
-<body>
- <nav>
-    <a routerLink="/registClient" routerLinkActive="active">Registrar un Client</a><br /><br />
-    <a routerLink="/updateClient" routerLinkActive="active">Modificar un registre</a><br /><br />
-    <a routerLink="/deleteClient" routerLinkActive="active">Eliminar un registre</a><br /><br />
-</nav>
- <!--<router-outlet></router-outlet>
-</body>
-    -->
-
-
-</html>
