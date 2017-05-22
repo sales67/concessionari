@@ -23,7 +23,12 @@ import {ListMarcaIdComponent} from './cotxes/marca/listMarca/listMarcaId/listMar
 import {ListMarcaNameComponent} from './cotxes/marca/listMarca/listMarcaName/listMarcaName.component';
 import {ListMarcaAllComponent} from './cotxes/marca/listMarca/listMarcaAll/listMarcaAll.component';
 
+// imports de Model
 
+import { addModelComponent } from './cotxes/model/add-model/addModel.component';
+import { deleteModelComponent } from './cotxes/model/delete-model/deleteModel.component';
+import { listModelComponent } from './cotxes/model/list-model/listModel.component';
+import { updateModelComponent } from './cotxes/model/update-model/updateModel.component';
 
 const routes: Routes = [
   {
@@ -92,6 +97,22 @@ const routes: Routes = [
   },{
     path: 'esborrar-eq',
     component: EsborrarEQComponent
+  },
+  {
+    path: 'addModel',
+    component: addModelComponent
+  },
+  {
+    path: 'deleteModel',
+    component: deleteModelComponent
+  },
+  {
+    path: 'listModel',
+    component: listModelComponent
+  },
+  {
+    path: 'updateModel',
+    component: updateModelComponent
   }
     
 ];

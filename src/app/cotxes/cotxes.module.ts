@@ -27,6 +27,11 @@ import { ListMarcaIdComponent } from './marca/listMarca/listMarcaId/listMarcaId.
 import { ListMarcaNameComponent } from './marca/listMarca/listMarcaName/listMarcaName.component';
 import {ListMarcaAllComponent} from './marca/listMarca/listMarcaAll/listMarcaAll.component';
 
+import { addModelComponent } from './model/add-model/addModel.component';
+import { deleteModelComponent } from './model/delete-model/deleteModel.component';
+import { listModelComponent } from './model/list-model/listModel.component';
+import { updateModelComponent } from './model/update-model/updateModel.component';
+
 
 @NgModule({
   imports: [
@@ -64,7 +69,13 @@ import {ListMarcaAllComponent} from './marca/listMarca/listMarcaAll/listMarcaAll
       ConsultarEQComponent,
       ModificarEQComponent,
       EsborrarEQComponent,
-      InformacioComponent
+      InformacioComponent,
+
+       addModelComponent,
+       deleteModelComponent,
+       listModelComponent,
+       updateModelComponent
+
 
   ]
 })
