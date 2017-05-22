@@ -7,18 +7,18 @@ import {Routes,Router} from '@angular/router';
 @Component({
   selector: 'deleteModel',
   templateUrl:'./deleteModel.component.html',
-  //styleUrls: ['../../cotxes.css'],
+  styleUrls: ['../../cotxes.css'],
   providers: [deleteModelService]
 })
 
-    export class DeleteMarcaComponent{
+    export class deleteModelComponent{
         
         deleteId;data;logError;
 
     constructor(private deleteModelService: deleteModelService) { }
              
         deleteMarca(){  
-            this.deleteModelService.deleteMarca(this.deleteId)               
+            this.deleteModelService.deleteModel(this.deleteId)               
       
         }
     }
