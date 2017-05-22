@@ -4,7 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { RegistComponent } from './regist/regist.component';
 import { UpdateComponent } from './update/update.component';
 import { DeleteComponent } from './delete/delete.component';
-import { ListClientComponent } from './list/client.component';
 
 const routes: Routes = [
     {
@@ -17,10 +16,6 @@ const routes: Routes = [
     }, {
         path: 'delete',
         component: DeleteComponent
-    },
-    {
-        path: 'list',
-        component: ListClientComponent
     }
 ];
 
