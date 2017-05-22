@@ -11,6 +11,9 @@ import { EquipamentService } from '../equipament.service';
 export class EsborrarEQComponent implements OnInit {
     
     idEq2: number;
+    missatge: string;
+    errors: string;
+    result: string;
 
     constructor( private equipamentService: EquipamentService) { }
 
@@ -19,8 +22,10 @@ export class EsborrarEQComponent implements OnInit {
     delEq() {
         this.equipamentService.esborrarEq(this.idEq2)
         .subscribe(
-            data => { this.idEq2 = data;},
-            () => console.log('has esborrat equipament: ' + this.idEq2)
+            data => { this.idEq2 = data; console.log(data); },
+            error => { this.errors = "No s'ha pogut esborrar l'equipament " + this.idEq2 }
+            // () => {this.missatge = "S'ha esborrat l'equipament " + this.idEq2;}
+            // error => this.errors = "No s'ha pogut esborrar l'equipament " + this.idEq2
         );
     }
 }
