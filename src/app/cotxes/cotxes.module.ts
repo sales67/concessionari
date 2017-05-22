@@ -19,6 +19,7 @@ import { ConsultarEQComponent } from './equipament/consultar-eq/consultar-eq.com
 import { ModificarEQComponent } from './equipament/modificar-eq/modificar-eq.component';
 import { EsborrarEQComponent } from './equipament/esborrar-eq/esborrar-eq.component';
 import {AppRoutingModule} from '../app-routing.module';
+import { InformacioComponent } from './informacio/informacio.component';
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import {AppRoutingModule} from '../app-routing.module';
       CrearEQComponent,
       ConsultarEQComponent,
       ModificarEQComponent,
-      EsborrarEQComponent
+      EsborrarEQComponent,
+      InformacioComponent
 
   ]
 })
