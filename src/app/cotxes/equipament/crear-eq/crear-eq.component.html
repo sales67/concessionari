@@ -1,3 +1,88 @@
-<p>
-  crear-eq works!
-</p>
+<div class="groc">
+<br>
+    <h2>Introdueix les dades per crear un nou equipament:</h2>
+    
+    <form name="crearEquipament">
+        <label for="crearNom">Nom: </label>
+        <input type="text" name="crearNom" id="crearNom" [(ngModel)]="crearNom"> <br> <br>
+        
+        <label for="crearCombustible">Combustible: </label>
+        <input type="text" name="crearCombustible" id="crearCombustible" [(ngModel)]="crearCombustible"> <br> <br>
+        
+        <label for="crearPotencia">Potència: </label>
+        <input type="text" name="crearPotencia" id="crearPotencia" [(ngModel)]="crearPotencia"> <br> <br>
+        
+        <label for="crearTraccio">Tracció: </label>
+        <input type="text" name="crearTraccio" id="crearTraccio" [(ngModel)]="crearTraccio"> <br> <br>
+        
+        <label>
+            <input type="checkbox" name="crearClimatitzador" [(ngModel)]="crearClimatitzador">
+            Climatitzador
+        </label> <br> <br>
+        
+        <label>
+            <input type="checkbox" name="crearLlantes17" [(ngModel)]="crearLlantes17">
+            Llantes de 17"
+        </label> <br> <br>
+        
+        <label>
+            <input type="checkbox" name="crearLlantes18" [(ngModel)]="crearLlantes18">
+            Llantes de 18"
+        </label> <br> <br>
+        
+        <label>
+            <input type="checkbox" name="crearLlantes19" [(ngModel)]="crearLlantes19">
+            Llantes de 19"
+        </label> <br> <br>
+        
+        <label>
+            <input type="checkbox" name="crearNavegador" [(ngModel)]="crearNavegador">
+            Navegador
+        </label> <br> <br>
+        
+        <label>
+            <input type="checkbox" name="crearPintura" [(ngModel)]="crearPintura">
+            Pintura metalitzada
+        </label> <br> <br>
+        
+        <label>
+            <input type="checkbox" name="crearMulti6" [(ngModel)]="crearMulti6">
+            Sistema multimèdia de 6":
+        </label> <br> <br>
+        
+        <label>
+            <input type="checkbox" name="crearMulti9" [(ngModel)]="crearMulti9">
+            Sistema multimèdia de 9":
+        </label> <br> <br>
+        
+        
+        <!--<label for="crearClimatitzador">Climatitzador: </label>
+        <input type="text" name="crearClimatitzador" id="crearClimatitzador" [(ngModel)]="crearClimatitzador"> <br> <br>
+        
+        <label for="crearLlantes17">Llantes de 17": </label>
+        <input type="text" name="crearLlantes17" id="crearLlantes17" [(ngModel)]="crearLlantes17"> <br> <br>
+        
+        <label for="crearLlantes18">Llantes de 18": </label>
+        <input type="text" name="crearLlantes18" id="crearLlantes18" [(ngModel)]="crearLlantes18"> <br> <br>
+        
+        <label for="crearLlantes19">Llantes de 19": </label>
+        <input type="text" name="crearLlantes19" id="crearLlantes19" [(ngModel)]="crearLlantes19"> <br> <br>
+        
+        <label for="crearNavegador">Navegador: </label>
+        <input type="text" name="crearNavegador" id="crearNavegador" [(ngModel)]="crearNavegador"> <br> <br>
+        
+        <label for="crearPintura">Pintura metalitzada: </label>
+        <input type="text" name="crearPintura" id="crearPintura" [(ngModel)]="crearPintura"> <br> <br>
+        
+        <label for="crearMulti6">Sistema multimèdia de 6": </label>
+        <input type="text" name="crearMulti6" id="crearMulti6" [(ngModel)]="crearMulti6"> <br> <br>
+        
+        <label for="crearMulti9">Sistema multimèdia de 9": </label>
+        <input type="text" name="crearMulti9" id="crearMulti9" [(ngModel)]="crearMulti9"> <br> <br> -->
+        
+        <button (click)="crearEquipament()" type="submit" class="btn btn-default">Submit</button>
+        
+    </form>
+    
+<br>
+</div>
