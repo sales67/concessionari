@@ -26,6 +26,10 @@ import { InformacioComponent } from './informacio/informacio.component';
 import { ListMarcaIdComponent } from './marca/listMarca/listMarcaId/listMarcaId.component';
 import { ListMarcaNameComponent } from './marca/listMarca/listMarcaName/listMarcaName.component';
 import {ListMarcaAllComponent} from './marca/listMarca/listMarcaAll/listMarcaAll.component';
+import { InformacioEmpresaComponent } from './informacio/informacio-empresa/informacio-empresa.component';
+import { NoticiesComponent } from './informacio/noticies/noticies.component';
+import { ContacteComponent } from './informacio/informacio-empresa/contacte/contacte.component';
+import { UbicacioComponent } from './informacio/informacio-empresa/ubicacio/ubicacio.component';
 
 
 @NgModule({
@@ -64,7 +68,11 @@ import {ListMarcaAllComponent} from './marca/listMarca/listMarcaAll/listMarcaAll
       ConsultarEQComponent,
       ModificarEQComponent,
       EsborrarEQComponent,
-      InformacioComponent
+      InformacioComponent,
+      InformacioEmpresaComponent,
+      NoticiesComponent,
+      ContacteComponent,
+      UbicacioComponent
 
   ]
 })

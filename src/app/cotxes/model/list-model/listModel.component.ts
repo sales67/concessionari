@@ -7,7 +7,7 @@ import {Routes,Router} from '@angular/router';
 @Component({
   selector: 'listModel',
   templateUrl:'./listModel.component.html',
-  //styleUrls: ['../../cotxes.css'],
+  styleUrls: ['../../cotxes.css'],
   providers: [listModelService]
 })
 

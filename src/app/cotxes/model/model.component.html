@@ -1,13 +1,15 @@
-<form name="addModel" display="block">      
-            <h2>Introdueix un nou model</h2>
-		        <label for="content">Entra el nom del model    </label><br>
+<!--<form name="addModel" display="block">-->      
+           <button routerLink="../addModel" routerLinkActive="active">Afegir models</button>
+        <button routerLink="../updateModel" routerLinkActive="active">Actualitzar Models</button>
+        <button routerLink="../listModel" routerLinkActive="active">Llista de models</button>
+        <button routerLink="../deleteModel" routerLinkActive="active">Eliminar Model </button>
+		        <!--<label for="content">Entra el nom del model    </label><br>
 		        <input type="text" name="addName" [(ngModel)]="addName"><br>
             <label for="content">Entra el nom de la Marca   </label><br>
 		        <input type="text" name="addModel" [(ngModel)]="addMarca"><br>
             
 		        <button (click)="addMarcaPost()" type="submit" class="btn btn-default">Envia per introduïr un model</button>
-		    </form>	<!--
-        <br>
+		    </form>	        <br>
         <form name="addMarcaPost"> 
                 <h2>Introdueix una nova Marca de cotxes (POST)</h2>
 		        <label for="content">Entra la Id del Concessionari    </label><br>
