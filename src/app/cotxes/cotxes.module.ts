@@ -21,6 +21,7 @@ import { EsborrarEQComponent } from './equipament/esborrar-eq/esborrar-eq.compon
 import {AppRoutingModule} from '../app-routing.module';
 import { ListMarcaIdComponent } from './marca/listMarca/listMarcaId/listMarcaId.component';
 import { ListMarcaNameComponent } from './marca/listMarca/listMarcaName/listMarcaName.component';
+import {ListMarcaAllComponent} from './marca/listMarca/listMarcaAll/listMarcaAll.component';
 
 @NgModule({
   imports: [
@@ -49,7 +50,8 @@ import { ListMarcaNameComponent } from './marca/listMarca/listMarcaName/listMarc
       UpdateMarcaComponent,
       ListMarcaComponent,
       ListMarcaIdComponent,
-      ListMarcaNameComponent,      
+      ListMarcaNameComponent, 
+      ListMarcaAllComponent,
 
 
       DeleteMarcaComponent,

@@ -21,8 +21,7 @@ import { ModificarEQComponent } from './cotxes/equipament/modificar-eq/modificar
 import { EsborrarEQComponent } from './cotxes/equipament/esborrar-eq/esborrar-eq.component';
 import {ListMarcaIdComponent} from './cotxes/marca/listMarca/listMarcaId/listMarcaId.component';
 import {ListMarcaNameComponent} from './cotxes/marca/listMarca/listMarcaName/listMarcaName.component';
-
-//import {MarcaModule} from './cotxes/marca/marca.module';
+import {ListMarcaAllComponent} from './cotxes/marca/listMarca/listMarcaAll/listMarcaAll.component';
 
 
 
@@ -57,6 +56,11 @@ const routes: Routes = [
     {
     path: 'listMarcaId',
     component: ListMarcaIdComponent,
+
+  },
+    {
+    path: 'listMarcaAll',
+    component: ListMarcaAllComponent,
 
   },
     {

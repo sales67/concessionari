@@ -9,6 +9,15 @@ import {sprintf} from "sprintf-js";
 
 @Injectable()
 
-export class MarcaService{
+export class ListMarcaAllService{
+private listUrl = 'http://172.17.0.98:8080/cotxe/listMarca';
+
 constructor(private http: Http){}
+
+getMarques() {
+      var a = this.http.get(this.listUrl)
+                .map(res => res.json())
+      return a;
+  }
+
 }
