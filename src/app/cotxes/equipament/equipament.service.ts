@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers, Response }  from '@angular/http';
+import { Http, Headers, Response, URLSearchParams }  from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Observable } from 'rxjs/Observable';
@@ -16,13 +16,11 @@ export class EquipamentService {
     constructor(private http: Http){ }
     
     equipamentBuit(): Equipament {
-        return new Equipament(
-            // 0,'','',0,'', false, false, false, false, false, false, false, false  
-        );
+        return new Equipament();
     }
     
     getEq(id) {
-      var a = this.http.get(this.myURL + '/demo/unXid?id=' + id)
+      var a = this.http.get(this.myURL + '/demo/unXidIt?id=' + id)
       .map(res => res.json())
       return a;
     }
@@ -58,6 +56,24 @@ export class EquipamentService {
 
     crearEquipamentPost(nom, combustible, potencia, traccio, clima, llantes17, llantes18, llantes19, navegador, pintura, multi6, multi9, preu) {
         
+        let data = new URLSearchParams();
+        data.append('name', nom);
+        data.append('combustible',combustible);
+        data.append('potencia',potencia);
+        data.append('traccio',traccio);
+        data.append('climatitzador',clima);
+        data.append('llantes17',llantes17);
+        data.append('llantes18',llantes18);
+        data.append('llantes19',llantes19);
+        data.append('navegador',navegador);
+        data.append('pintura',pintura);
+        data.append('multimedia6',multi6);
+        data.append('multimedia9',multi9);
+        data.append('preu',preu);
+     
+        let credsObj = {name: nom, combustible:combustible, potencia:potencia, traccio:traccio, climatitzador:clima, llantes17:llantes17, llantes18:llantes18, llantes19:llantes19,
+                       navegador:navegador, pintura:pintura, multimedia6:multi6, multimedia9: multi9, preu:preu};
+        
         var creds = "name=" + nom + "&combustible=" + combustible + "&potencia=" + potencia + "&traccio=" + traccio + "&climatitzador=" + clima +
                      "&llantes17=" + llantes17 + "&llantes18=" + llantes18 + "&llantes19=" + llantes19 + "&navegador=" + navegador +
                      "&pintura=" + pintura  + "&multimedia6=" + multi6  + "&multimedia9=" + multi9 + "&preu=" + preu;
@@ -68,6 +84,8 @@ export class EquipamentService {
         var a = this.http.post(this.myURL + '/demo/add?', creds, {
             headers:headers
         }).map(res => res.json());
+        
+        var b = this.http.post(this.myURL + '/demo/add?', data);
         
         return a;
     }
