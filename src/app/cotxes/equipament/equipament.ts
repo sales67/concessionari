@@ -12,4 +12,6 @@ export class Equipament {
     public pintura: boolean;
     public multimedia6: boolean;
     public multimedia9: boolean;
+    public preu: number;
+    public model: number;
 }

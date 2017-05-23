@@ -16,6 +16,10 @@ export class ConsultarEQComponent implements OnInit {
     public equipaments2: Array<Equipament> = [];
     errors: string;
     
+    idModel;
+    nomModel: string;
+    marcaImodel: Array<String> = [];
+    
     constructor( private equipamentService: EquipamentService) { }
     
     ngOnInit() {
@@ -23,9 +27,15 @@ export class ConsultarEQComponent implements OnInit {
     }
     
     trobaEquipament() {
+        let idModel = this.equipamentService.getIdModel(this.idEq);
+        
+        console.log("id model: " + idModel)
+        
         this.equipamentService.getEq(this.idEq)
             .subscribe(
-                data => { this.equipaments = data; console.log(data); }, // data => { this.equipament = data; console.log(data); },
+                // data => { this.equipaments = data; this.nomModel = this.equipamentService.funcioJaume(data[0].model); }, 
+                data => { this.equipaments = data; this.marcaImodel = this.equipamentService.funcioJaume(data[0].model); }, // data => { this.equipament = data; console.log(data); },
+
                 err => {console.error(err); this.errors = "S'ha produit un error, prova amb un altre ID.";},
                 () => {console.log('done'); this.errors = "";}
             );
@@ -38,5 +48,18 @@ export class ConsultarEQComponent implements OnInit {
                     err => console.error(err),
                     () => console.log('done')
         );
+    }
+    
+    trobaIdModel() {
+        this.equipamentService.getIdModel(this.idEq)
+            .subscribe(
+                data => { this.equipaments = data; console.log(data); }, // data => { this.equipament = data; console.log(data); },
+                err => {console.error(err); this.errors = "S'ha produit un error, prova amb un altre ID.";},
+                () => {console.log('done'); this.errors = "";}
+            );
+    }
+    
+    trobaMarcaImodel() {
+        
     }
 }
