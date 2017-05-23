@@ -27,8 +27,8 @@ export class ModificarEQComponent implements OnInit {
     ];
 
     public certFals = [
-        {value: 'true', display: 'Cert'},
-        {value: 'false', display: 'Fals'},
+        {value: 'true', display: 'Afegir'},
+        {value: 'false', display: 'Treure'},
     ];
 
     camp: string;
@@ -42,14 +42,13 @@ export class ModificarEQComponent implements OnInit {
         let esBoolea = <HTMLElement>document.body.querySelector("#esBoolea");
         let selectBool = <HTMLInputElement>document.body.querySelector("#selectBool");
         
-        
-        
         selectBool.addEventListener("change", () => {
             if(selectBool.value == 'nom' || selectBool.value == 'combustible' || selectBool.value == 'potencia' || selectBool.value == 'traccio') {
-                console.log("No és booleà");
-                
+                noEsBoolea.hidden = false;
+                esBoolea.hidden = true;
             } else {
-                console.log("És booleà");
+                noEsBoolea.hidden = true;
+                esBoolea.hidden = false;
             }
         })
     }
