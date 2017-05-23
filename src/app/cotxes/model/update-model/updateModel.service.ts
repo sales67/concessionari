@@ -1,5 +1,5 @@
 import {Injectable}  from '@angular/core';
-import {Http,Headers}  from '@angular/http';
+import {Http,Headers,RequestOptions}  from '@angular/http';
 import 'rxjs/add/operator/map';
 import {Observable} from 'rxjs/Observable';
 import {sprintf} from "sprintf-js";
@@ -12,8 +12,10 @@ private updateUrl = 'http://172.17.0.242:8080/demo/update?';
 
 constructor(private http: Http){}
 
-updateModel(addId,addName,addMarca){     
+
+updateModel(addId,addName,addMarca)   {  
         var creds = "id=" + addId +  "&model=" + addName + "&marca=" + addMarca;
+
         
         var headers = new Headers();       
         headers.append('Access-Control-Allow-Origin', '*');       
