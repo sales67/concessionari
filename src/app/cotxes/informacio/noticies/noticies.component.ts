@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-noticies',
   templateUrl: './noticies.component.html',
   styleUrls: ['./noticies.component.css']
 })
-export class NoticiesComponent implements OnInit {
+export class NoticiesComponent {   
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  img1 = "./ferrari-420.jpg";
 
 }

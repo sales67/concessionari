@@ -13,7 +13,7 @@ import {Routes,Router} from '@angular/router';
 
     export class deleteModelComponent{
         
-        deleteId;data;logError;
+        deleteId;data;logError;deleteMarca;
 
     constructor(private deleteModelService: deleteModelService) { }
              
@@ -21,4 +21,11 @@ import {Routes,Router} from '@angular/router';
             this.deleteModelService.deleteModel(this.deleteId)               
       
         }
+        /////// TREBALLAR EN AIXO //////////
+        /*deleteByMarca(){
+             var list = this.deleteModelService.deleteByMarca(this.deleteMarca);
+             for (var i = list.length - 1; i >= 0; i--) {
+               list[i]
+             }
+        }*/
     }

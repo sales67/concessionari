@@ -13,6 +13,7 @@ export class ConsultarEQComponent implements OnInit {
     idEq: number;
     equipament: Equipament;
     public equipaments: Array<Equipament> = [];
+    errors: string;
     
     constructor( private equipamentService: EquipamentService) { }
     
@@ -24,8 +25,8 @@ export class ConsultarEQComponent implements OnInit {
         this.equipamentService.getEq(this.idEq)
             .subscribe(
                 data => { this.equipament = data; console.log(data); },
-                err => console.error(err),
-                () => console.log('done')
+                err => {console.error(err); this.errors = "S'ha produit un error, prova amb un altre ID.";},
+                () => {console.log('done'); this.errors = "";}
             );
     }
     
