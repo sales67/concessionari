@@ -12,7 +12,7 @@
         <button (click)="trobaEquipament()" type="submit" class="btn btn-success">Submit</button>
     </form>
     
-    <!--<p>ID: {{equipament.id}}</p>-->
+    <div *ngFor='let equipament of equipaments'>
     <p>Nom: {{equipament.name}}</p>
     <p>Combustible: {{equipament.combustible}}</p>
     <p>Potència: {{equipament.potencia}}</p>
@@ -25,6 +25,7 @@
     <p>Pintura metalitzada: {{equipament.pintura}}</p>
     <p>Equip multimèdia de 6": {{equipament.multimedia6}}</p>
     <p>Equip multimèdia de 9": {{equipament.multimedia9}}</p>
+    </div>
 
     <br>
 </div>
@@ -36,7 +37,7 @@
 
         <button (click)="trobaEquipaments()" type="submit" class="btn btn-default">Submit</button><br>
 
-        <div *ngFor='let eq of equipaments'>
+        <div *ngFor='let eq of equipaments2'>
             <p>ID: {{eq.id}}</p>
             <p>Nom: {{eq.name}}</p>
             <p>Potència: {{eq.potencia}}</p>

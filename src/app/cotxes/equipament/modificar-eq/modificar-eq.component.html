@@ -14,19 +14,19 @@
     <label>Selecciona el camp que vols modificar </label>  
     <br> <br>
     
-    <div id="noEsBoolea">
+    <div id="noEsBoolea" [hidden]="true">
         <input type="text" name="nouValor" id="nouValor" [(ngModel)]="nouValor">
         <label> Introdueix el nou valor </label>
         <br> <br>
-    </div> <br> <br>
+    </div>
     
-    <div id="esBoolea">
+    <div id="esBoolea" [hidden]="true">
         <select name="esBoolea" [(ngModel)]="nouValor">
             <option *ngFor="let cf of certFals" [value]="cf.value">  
                 {{cf.display}}
             </option>
         </select>
-        <label>Selecciona Cert o Fals</label>
+        <label>Ho vols afegir o treure de l'equipament?</label>
         <br> <br>
     </div>
     

@@ -89,8 +89,8 @@ export class CrearEQComponent implements OnInit {
                                                    this.crearLlantes17, this.crearLlantes18, this.crearLlantes19, this.crearNavegador, this.crearPintura,
                                                    this.crearMulti6, this.crearMulti9, this.crearPreu)
             .subscribe(
-            data => { this.crearNom = data; },
-            () => console.log('has creat un nou equipament: ' + this.crearNom)
+                data => { this.crearNom = data; },
+                () => console.log('has creat un nou equipament: ' + this.crearNom)
         );
     }
 
