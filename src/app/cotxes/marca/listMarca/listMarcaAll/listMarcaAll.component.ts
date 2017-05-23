@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-//import {StateService} from '../common/state.service';
 import {ListMarcaAllService} from './listMarcaAll.service';
 import {Http, Headers,Response} from '@angular/http';
 import {Routes,Router} from '@angular/router';

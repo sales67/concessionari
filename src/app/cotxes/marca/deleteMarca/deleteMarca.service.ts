@@ -11,5 +11,4 @@ constructor(private http: Http){}
 deleteMarca(deleteId){ 
         var a = this.http.delete(this.delUrl+ deleteId);
     }
-
 }
