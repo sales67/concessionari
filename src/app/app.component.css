@@ -92,12 +92,9 @@ right: 0;
     right: 99.5%;
   }
 
-.title{
 
-  width:300px;
-  
-}
 .title .ii{
-  width:100px;
+  width:200px;
   float:right;
+  margin-right:200px;
 }
