@@ -17,6 +17,8 @@ export class UpdateComponent implements OnInit {
     idU; dniU; nomU; cognomsU; correuU; direccioU; telefonU; updateC;
 
     constructor(private updateService: UpdateService) { }
+
+    
     updateButton() {
 
         this.updateService.updateClient(this.idU, this.dniU, this.nomU, this.cognomsU,
@@ -25,7 +27,7 @@ export class UpdateComponent implements OnInit {
             data => { this.updateC = data },
             () => console.log('Has modificat el client ' + this.nomU));
     }
-
+    
     ngOnInit() {
     }
 
