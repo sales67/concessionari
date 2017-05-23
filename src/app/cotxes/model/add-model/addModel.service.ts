@@ -25,10 +25,13 @@ export class addModelService{
   }
    
 addModelPost(addName,addMarca){     
-        var creds = "nom=" + addName + "&marca=" + addMarca;
+        var creds = "model=" + addName + "&marca=" + addMarca;
         
+        //let creds = {model: addName, marca:addMarca};
+
         var headers = new Headers();       
-        headers.append('Access-Control-Allow-Origin', '*');       
+        //headers.append('Access-Control-Allow-Origin', '*');
+        headers.append('Content-Type', 'application/x-www-form-urlencoded');       
 
         
         var a = this.http.post('http://172.17.0.242:8080/demo/newModel',creds,{
