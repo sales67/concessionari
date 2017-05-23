@@ -87,7 +87,17 @@ margin-left: 5px;
 left: auto;
 right: 0;
 }
-#cssmenu ul li.last ul ul {
-left: auto;
-right: 99.5%;
+  #cssmenu ul li.last ul ul {
+    left: auto;
+    right: 99.5%;
+  }
+
+.title{
+
+  width:300px;
+  
+}
+.title .ii{
+  width:100px;
+  float:right;
 }
