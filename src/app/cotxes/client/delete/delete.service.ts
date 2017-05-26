@@ -21,12 +21,18 @@ export class DeleteService {
         return this.http.delete('http://172.17.0.161:8080/client/delete'+ crear, {
             headers: headers
         })
-            .map((response: Response) => {
+            .map((response: Response) => {  
+                console.log("Client Eliminat");
                 return response;
             })
             .catch((error: any) => {
-                if (error.status !== 500 || error.status !== "500") {
-                    console.log("Client inexistent");
+                if (error.status === 500 || error.status === "500") {
+                    var a = "Client Inexistent";
+                    console.log(a);
+                    return a;  
+                }
+                else if (error.status === 400 || error.status === "400") {
+                    console.log("Falten dades");
                 }
                 else {
                     return error.json();
