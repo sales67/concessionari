@@ -24,19 +24,10 @@ export class ClientService {
     
     listClient(telefon) {
         return this.http.get('http://172.17.0.161:8080/client/idClient?telefon=' + telefon)
-            .map(res => res.json());/*function (telefon) {
+            .map((response: Response) => response.json());
+                 
+    }
 
-                try {
-                    if (telefon) {
-                        throw new Error("no es 611111111");
-                    }
-                    return telefon;
-                } catch (error) {
-                    console.log("yo bitch");
-                    return undefined;
-                }
-            }*/
- }
 
     listClients(): Observable<Client[]> {
         return this.http.get(this.url).map((res: Response) => res.json());

@@ -13,7 +13,7 @@ import {Routes,Router} from '@angular/router';
 
     export class deleteModelComponent{
         
-        deleteId;data;logError;deleteMarca;
+        deleteId;data;logError;getMarca;list;id;deleteId2;
 
     constructor(private deleteModelService: deleteModelService) { }
              
@@ -28,4 +28,27 @@ import {Routes,Router} from '@angular/router';
                list[i]
              }
         }*/
+        deleteByMarca(){
+          var lista;
+           this.list = this.deleteModelService.getByMarca(this.getMarca);
+           this.list.subscribe(
+              data => {lista = data;
+                 for (var i = lista.length - 1; i >= 0; i--) {
+                   var resposta = lista[i];
+                   this.deleteModelService.deleteModel(resposta.id);
+                 }
+              },
+              () => {console.log("complert")}
+            )
+           //var jsonList =this.list._body;
+           //console.log(JSON.stringify(jsonList));
+          
+           //console.log(this.list._body);
+           //console.log(JSON.parse(this.list));
+           /*
+           for(this.id=0;this.id < this.list.length; this.id++)
+           {
+             console.log("for");
+           }*/
+        }
     }

@@ -17,22 +17,48 @@ export class ClientComponent implements OnInit {
 
     id;
     clients;//es la variable del for
-    telefonClient;
+    telefonClient; errorC; finishedC; errorServer; errorClient; errorBuit;
     
 
     constructor(private clientService: ClientService) { }
 
     listButton() {
-        this.clientService.listClients().subscribe(
-            data => { this.clients = data; console.log(data); },
-            () => console.log('done'));
+        this.clientService.listClients()
+            
+        .subscribe(
+            data => { this.clients = data; console.log(data); },)
+            //() => console.log('done'))
     }
 
-    listButtonId() {
-        this.clientService.listClient(this.telefonClient).subscribe(
-            data => { this.clients = data; console.log(data); },
-            err => console.error(err),
-            () => console.log('done'));
+    listButtonId() {//no hem mostra els error ( retorna undefinded el data )
+        this.clientService.listClient(this.telefonClient)
+            .catch((error: any) => {
+                if (error.status === 500 || error.status === "500") {
+                    this.errorClient = true;
+                }
+                else if (error.status === 400) {
+                    this.errorBuit = true;
+                }
+                else if (error.status === 0) {
+                    this.errorServer = true;
+                }
+                else {
+                    return error.json();
+                }
+            })
+            .subscribe(
+            data => {
+            this.clients = data;
+
+            console.log(this.clients);
+            },
+            error => {},
+            () => this.finishedC = true
+        );
+        this.errorServer = false;
+        this.errorClient = false;
+        this.errorBuit = false;
+        this.finishedC = false;
     }
 
 

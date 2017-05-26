@@ -16,7 +16,7 @@ import { Client } from '../client';
 })
 export class UpdateComponent implements OnInit {
 
-    idU; dniU; nomU; cognomsU; correuU; direccioU; telefonU; updateC;
+    idU; dniU; nomU; cognomsU; correuU; direccioU; telefonU; updateC; errorU; finishedU;
 
     constructor(private updateService: UpdateService) { }
 
@@ -26,7 +26,11 @@ export class UpdateComponent implements OnInit {
         this.updateService.updateClient(this.idU, this.dniU, this.nomU, this.cognomsU,
             this.correuU, this.direccioU, this.telefonU)
             .subscribe(data => { this.updateC = data },
-            () => console.log());
+             error => this.errorU = true,
+                () => this.finishedU = true
+      );
+        this.errorU = false;
+        this.finishedU = false;
     }
     
     ngOnInit() {

@@ -59,13 +59,10 @@ export class UpdateService {
                     console.log("Client inexistent");
                 }
                 else if (error.status === 400) {
-                    return Observable.throw(new Error(error.status));
+                    console.log("Falten dades");
                 }
-                else if (error.status === 404) {
-                    return Observable.throw(new Error(error.status));
-                }
-                else if (error.status === 405) {
-                    return Observable.throw(new Error(error.status));
+                else {
+                    return error.json();
                 }
                 
             });
