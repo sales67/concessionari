@@ -1,5 +1,5 @@
 ﻿import { Injectable } from '@angular/core';
-import { Http, Headers } from '@angular/http';
+import { Http, Headers, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs/Observable';
 import { sprintf } from "sprintf-js";
@@ -18,11 +18,20 @@ export class DeleteService {
         headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
 
-        var a = this.http.delete('http://172.17.0.161:8080/client/delete'+ crear, {
+        return this.http.delete('http://172.17.0.161:8080/client/delete'+ crear, {
             headers: headers
         })
-            .map(res => res.json());
-        return a;
+            .map((response: Response) => {
+                return response;
+            })
+            .catch((error: any) => {
+                if (error.status !== 500 || error.status !== "500") {
+                    console.log("Client inexistent");
+                }
+                else {
+                    return error.json();
+                }
+            });
     }
 
 }

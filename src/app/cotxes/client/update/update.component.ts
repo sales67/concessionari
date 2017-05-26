@@ -6,6 +6,8 @@ import { Routes } from '@angular/router';
 import { Client } from '../client';
 
 
+
+
 @Component({
     selector: 'app-update',
     templateUrl: './update.component.html',
@@ -23,9 +25,8 @@ export class UpdateComponent implements OnInit {
 
         this.updateService.updateClient(this.idU, this.dniU, this.nomU, this.cognomsU,
             this.correuU, this.direccioU, this.telefonU)
-            .subscribe(
-            data => { this.updateC = data },
-            () => console.log('Has modificat el client ' + this.nomU));
+            .subscribe(data => { this.updateC = data },
+            () => console.log());
     }
     
     ngOnInit() {

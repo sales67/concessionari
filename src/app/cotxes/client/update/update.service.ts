@@ -1,10 +1,12 @@
 ﻿import { Injectable } from '@angular/core';
-import { Http, Headers, RequestOptions, URLSearchParams } from '@angular/http';
+import { Http, Headers, RequestOptions, URLSearchParams, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs/Observable';
 import { sprintf } from "sprintf-js";
 
 import { Client } from '../client';
+
+//import { ErrorHandler } from '@angular/core';
 
 
 @Injectable()
@@ -25,8 +27,8 @@ export class UpdateService {
             .map(res => res.json());
         return a;
     }*/
-    updateClient(idU,dniU,nomU,cognomsU,direccioU,correuU,telefonU) {
-        
+    updateClient(idU, dniU, nomU, cognomsU, direccioU, correuU, telefonU) {
+
         let params: URLSearchParams = new URLSearchParams();
         params.set('id', idU);
         params.set('dni', dniU);
@@ -41,27 +43,32 @@ export class UpdateService {
         var headers = new Headers();
         headers.append('Access-Control-Allow-Origin', '*');
 
-        return this.http.put('http://172.17.0.161:8080/client/put?' + body, options)
-            .map(response => response.json());
+        return this.http.put("http://172.17.0.161:8080/client/put?" + body, options)
+            .map((res: Response) => {
+                if (res) {
+                    if (res.status === 201) {
+                        return [{ status: res.status, json: res }]
+                    }
+                    else if (res.status === 200) {
+                        return [{ status: res.status, json: res }]
+                    }
+                }
+                })
+            .catch((error: any) => {
+                if (error.status === 500 || error.status === "500") {
+                    console.log("Client inexistent");
+                }
+                else if (error.status === 400) {
+                    return Observable.throw(new Error(error.status));
+                }
+                else if (error.status === 404) {
+                    return Observable.throw(new Error(error.status));
+                }
+                else if (error.status === 405) {
+                    return Observable.throw(new Error(error.status));
+                }
+                
+            });
     }
+
 }
-
-    /*
-     updateClient(idU, dniU, nomU, cognomsU, correuU, direccioU, telefonU) {
-        /*var crear = "id=" + idU + "&dni=" + dniU + "&nom=" + nomU + "&cognoms=" +
-            cognomsU + "&correu=" + correuU + "&direccio=" + direccioU + "&telefon=" + telefonU;*/
-        /*var headers = new Headers();
-        headers.append('Content-Type', 'application/x-www-form-urlencoded');
-
-        let client = {
-            id: idU, dni: dniU, nom: nomU, cognoms: cognomsU,
-            correu: correuU, direccio: direccioU, telefon: telefonU
-        };
-       
-
-        let options = new RequestOptions({ headers: headers, method: "put" });
-        var a = this.http.put('http://172.17.0.161:8080/client/put', JSON.stringify(client), options)
-            .map(res => res.json());
-        return a;
-    }
-}*/

@@ -5,6 +5,8 @@ import { RegistComponent } from './regist/regist.component';
 import { UpdateComponent } from './update/update.component';
 import { DeleteComponent } from './delete/delete.component';
 
+//import MyErrorHandler from './client.service';
+
 const routes: Routes = [
     {
         path: 'regist',
@@ -21,6 +23,7 @@ const routes: Routes = [
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+    exports: [RouterModule],
+   // providers: [{ provide: ErrorHandler, useClass: MyErrorHandler }]
 })
 export class ClientRoutingModule { }

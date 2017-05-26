@@ -4,6 +4,7 @@ import { Http, Headers, Response } from '@angular/http';
 import { Routes, Router } from '@angular/router';
 import { Client } from './client';
 import { ClientService } from './client.service';
+import 'rxjs/add/operator/catch';
 
 @Component({
   selector: 'app-client',
@@ -30,8 +31,11 @@ export class ClientComponent implements OnInit {
     listButtonId() {
         this.clientService.listClient(this.telefonClient).subscribe(
             data => { this.clients = data; console.log(data); },
+            err => console.error(err),
             () => console.log('done'));
     }
+
+
 
     ngOnInit() {
         
