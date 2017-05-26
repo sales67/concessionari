@@ -24,6 +24,8 @@ export class CrearEQComponent implements OnInit {
     crearMulti9: boolean;
     crearPreu: number;
     
+    missatge_crear: string;
+    
     public combustibles = [
         { value: 'Gasolina', display: 'Gasolina' },
         { value: 'Diesel', display: 'Diesel' },
@@ -80,9 +82,11 @@ export class CrearEQComponent implements OnInit {
         this.crearPintura = false;
         this.crearMulti6 = false;
         this.crearMulti9 = false;
-        this.crearPotencia = 0;
-        this.crearPreu = 0;
+        this.crearPotencia;
+        this.crearPreu;
     }
+
+    isNumber(val) { return typeof val === 'number'; }
 
     crearEquipament() {
         this.equipamentService.crearEquipamentPost(this.crearNom, this.crearCombustible, this.crearPotencia, this.crearTraccio, this.crearClimatitzador,
@@ -90,6 +94,8 @@ export class CrearEQComponent implements OnInit {
                                                    this.crearMulti6, this.crearMulti9, this.crearPreu)
             .subscribe(
                 data => { this.crearNom = data; },
+                err => { this.missatge_crear = "S'ha produit un error a l'hora de crear l'equipament: "; },
+                
                 () => console.log('has creat un nou equipament: ' + this.crearNom)
         );
     }

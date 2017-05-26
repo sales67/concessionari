@@ -32,6 +32,23 @@ export class EquipamentService {
         return a;
     }
 
+    // NO CAL AQUESTA FUNCIÓ ??
+    // li passem l'ID de l'equipament i retorna l'ID del model
+    getIdModel(id) {
+        var a = this.http.get(this.myURL + '/demo/getIdModel?id=' + id)
+        .map(res => res.json())
+      // console.log("aaaaa:"+a);
+        return a;
+    }
+
+    funcioJaume(model) {
+        /*var a = this.http.get(this.myURL + '/demo/getIdModel?id=' + id)
+            .map(res => res.json())
+        
+        return a;*/
+        return ["Renault", "Scènic"];
+    }
+
     esborrarEq(id) {
         var a = this.http.delete(this.myURL + '/demo/del?id=' + id)
         .map(res => res.json())

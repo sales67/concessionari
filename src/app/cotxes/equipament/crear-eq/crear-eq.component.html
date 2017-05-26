@@ -2,6 +2,8 @@
 <br>
     <h2>Introdueix les dades per crear un nou equipament:</h2>
     
+    <p class="error">{{missatge_crear}}</p>    
+    
     <form name="crearEquipament">
         
         <input type="text" name="crearNom" id="crearNom" [(ngModel)]="crearNom">
@@ -20,8 +22,10 @@
         <label for="crearCombustible">Combustible </label>
         <br><br>-->
         
+        <!--<input *ngIf="isNumber(crearPotencia) ? missatge_crear = 'problema' : missatge_crear = 'problema'" type="text" name="crearPotencia" id="crearPotencia" [(ngModel)]="crearPotencia">-->
         <input type="text" name="crearPotencia" id="crearPotencia" [(ngModel)]="crearPotencia">
         <label for="crearPotencia">Potència </label>
+        <span class="error" *ngIf="crearPotencia < 10"> - - La potència ha de ser més gran!! - -</span>
         <br><br>
         
         <!--<input type="text" name="crearTraccio" id="crearTraccio" [(ngModel)]="crearTraccio">
