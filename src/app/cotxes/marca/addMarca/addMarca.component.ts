@@ -13,14 +13,17 @@ import {AddMarcaService} from './addMarca.service';
 
     export class AddMarcaComponent{
         
-        addName;addTel;addCountry;addMail;
+        addName;addTel;addCountry;addMail;values;error;finished;
            
  constructor(private addMarcaService: AddMarcaService) { } 
         
      addMarcaPost(){        this.addMarcaService.addMarcaPost(this.addName,this.addTel,this.addCountry,this.addMail)
                .subscribe(
-                data => { this.addName = data;},    
-                () => console.log('has afegit la marca: '+this.addName)
-      );}       
-
+          value => this.values=value,
+          error => this.error = true,
+          () => this.finished = true
+      );
+        this.error=false;
+        this.finished=false;
+     }
     }

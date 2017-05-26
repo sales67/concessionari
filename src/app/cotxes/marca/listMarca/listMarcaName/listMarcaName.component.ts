@@ -13,13 +13,23 @@ import {Routes,Router} from '@angular/router';
     export class ListMarcaNameComponent{
 
     constructor(private listMarcaNameService: ListMarcaNameService) { }
-         marques; 
-         name;
+         marques;name;error;finished;
     listMarcaName(){
      this.listMarcaNameService.getMarcaId(this.name)
                 .subscribe(
-                data => { this.marques = data;console.log(data);},
-                err => console.error(err),
-                () => console.log('done')
-      );}
+          value => {   
+              this.marques=value;
+              console.log(this.marques);
+              
+             if (this.marques.length==0)
+                    {
+                        this.error = true;
+                    }
+          },
+          error => this.error = true,
+          () => this.finished = true
+      );
+        this.error=false;
+        this.finished=false;
     }
+}

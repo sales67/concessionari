@@ -1,5 +1,11 @@
 <html>
     <body>
+                <div *ngIf="error" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
+    <strong>Error!</strong> Aquesta marca no existeix
+</div>
+        <div *ngIf="errorServer" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
+    <strong>Error!</strong> Aquesta marca no existeix
+</div>
     <form name="listMarcaName" display="block">      
             <h2>Mostrar les dades de una marca</h2>
             	<label for="content">Entra el nom a buscar </label><br>
@@ -13,6 +19,6 @@
                         Correu: {{marca.correu}} <br>
                         País: {{marca.pais}}
                 </div>	
-    </form>
+    </form>  
     </body>
 </html>

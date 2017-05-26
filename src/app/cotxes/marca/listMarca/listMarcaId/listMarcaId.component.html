@@ -1,5 +1,8 @@
 <html>
     <body>
+        <div *ngIf="error;else success" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
+    <strong>Error!</strong> La id no existeix
+</div>
     <form name="listMarcaId" display="block">      
             <h2>Mostrar les dades de una marca</h2>
             	<label for="content">Entra l'id a buscar </label><br>
