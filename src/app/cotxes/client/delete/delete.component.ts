@@ -14,16 +14,38 @@ import { Client } from '../client';
 })
 export class DeleteComponent implements OnInit {
 
-    idD; deleteC;
+    idD; deleteC; errorD; finishedD; errorServerD; errorClientD; errorBuitD;
+
     constructor(private deleteService: DeleteService) { }
 
-  deleteButton() {
+    deleteButton() {
 
-      this.deleteService.deleteClient(this.idD)
+        this.deleteService.deleteClient(this.idD)
+            .catch((error: any) => {
+                if (error.status === 500 || error.status === "500") {
+                    this.errorClientD = true;
+                }
+                else if (error.status === 400) {
+                    this.errorBuitD = true;
+                }
+                else if (error.status === 0) {
+                    this.errorServerD = true;
+                }
+                else {
+                    this.finishedD = true;
+                    return error.json();
+                }
+        })
           .subscribe(
-          data => { this.deleteC = data })
-          //() => console.log('Has eliminat el client'));
+          data => { this.deleteC = data },
+          error => { },
+          );
+        this.errorServerD = false;
+        this.errorClientD = false;
+        this.errorBuitD = false;
+        this.finishedD = false;
   }
+          //() => console.log('Has eliminat el client'));
 
   ngOnInit() {
   }

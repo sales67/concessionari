@@ -62,7 +62,7 @@ export class UpdateService {
                     console.log("Falten dades");
                 }
                 else {
-                    return Observable.throw(new Error(error.status));
+                    return error.json();
                 }
                 
             });

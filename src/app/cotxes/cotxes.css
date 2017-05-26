@@ -1,4 +1,4 @@
-input{
+﻿input{
 	width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -34,4 +34,7 @@ button{
     margin-bottom: 20px;
     border: 1px solid transparent;
     border-radius: 4px;
+}
+.error{
+  color:orangered;
 }
