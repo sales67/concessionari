@@ -13,16 +13,22 @@ import {Routes,Router} from '@angular/router';
 
     export class UpdateMarcaComponent{
         
-    addId;addName;addTel;addCountry;addMail;
+    addId;addName;addTel;addCountry;addMail;values;error;finished;
+        
 
     constructor(private updateMarcaService: UpdateMarcaService) { }
-            
-                
+                            
         updateMarca(){        this.updateMarcaService.updateMarca(this.addId,this.addName,this.addTel,this.addCountry,this.addMail)
                .subscribe(
-                data => { this.addName = data;},                    
-                () => console.log('has actualitzat la marca: '+this.addName)
-      );}        
-  
-    }
+          value => this.values=value,
+          error => this.error = true,
+          () => this.finished = true
+      );
+        this.error=false;
+        this.finished=false;
+     }
+        
+}
+
+                      
     

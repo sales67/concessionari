@@ -14,12 +14,12 @@ import {Routes,Router} from '@angular/router';
 
     constructor(private listMarcaService: ListMarcaService) { }
          marques; 
+
         
     listMarca(){
      this.listMarcaService.getMarques()
                 .subscribe(
-                data => { this.marques = data;console.log(data);},
-                err => console.error(err),
-                () => console.log('done')
-      );}
+                data => (this.marques = data)
+      );    
+    }
     }
