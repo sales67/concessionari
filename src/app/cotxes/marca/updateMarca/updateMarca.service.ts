@@ -1,5 +1,5 @@
 import {Injectable}  from '@angular/core';
-import {Http,Headers,RequestOptions,URLSearchParams}  from '@angular/http';
+import {Http,Headers,RequestOptions,URLSearchParams,Response}  from '@angular/http';
 import 'rxjs/add/operator/map';
 //import { Cotxe } from './cotxe';
 //import {Model} from './model';
@@ -36,12 +36,27 @@ params.set('telefon', addTel);
 params.set('pais', addCountry);
 params.set('correu', addMail);
 
+
     let options = new RequestOptions({ headers: headers });
     let body = params.toString();
     var headers = new Headers();       
         headers.append('Access-Control-Allow-Origin', '*');  
 
 return this.http.put(this.updateUrl+body,options)    
-    .map(response => response.json());    
+    .map((response: Response) => {  
+               console.log("Client actualitzat");
+           })
+           .catch((error: any) => {
+               if (error.status === 500 || error.status === "500") {
+                   console.log("Client Inexistent");                   
+               }
+               else if (error.status === 400 || error.status === "400") {
+                   console.log("Falten dades");
+               }
+               else {
+                   return error.json();
+               }
+        }) 
     }
+
 }
