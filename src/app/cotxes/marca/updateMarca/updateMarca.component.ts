@@ -43,10 +43,8 @@ import {Routes,Router} from '@angular/router';
         this.errorBuit=false;
         this.errorServer=false;
         this.finished=false;
-        this.errorId=false;
-        
-     }
-    
+        this.errorId=false;       
+     }    
 }
 
                       
