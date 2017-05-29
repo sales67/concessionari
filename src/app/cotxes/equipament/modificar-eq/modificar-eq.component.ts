@@ -35,6 +35,10 @@ export class ModificarEQComponent implements OnInit {
     idEq4: number;
     nouValor: string;
 
+    error_mod = false;
+    values_mod;
+    finished_mod;
+
     constructor( private equipamentService: EquipamentService) { }
 
     ngOnInit() {
@@ -57,9 +61,24 @@ export class ModificarEQComponent implements OnInit {
         
         this.equipamentService.modEq(this.idEq4, this.camp, this.nouValor)
         .subscribe(
+                // value => this.values_mod = value,
+                // error => this.error_mod = true,
+                // () => this.finished_mod = true
                 data => { this.idEq4 = data; },
                 // err => console.error(err), // P E T A
                 () => console.log('Modificat equipament amb id: ' + this.idEq4)
             );
+            // this.error_mod = false;
+            // this.finished_mod = false;
     }
+
+    /*updateMarca(){        this.updateMarcaService.updateMarca(this.addId,this.addName,this.addTel,this.addCountry,this.addMail)
+               .subscribe(
+          value => this.values=value,
+          error => this.error = true,
+          () => this.finished = true
+      );
+        this.error=false;
+        this.finished=false;
+     }*/
 }
