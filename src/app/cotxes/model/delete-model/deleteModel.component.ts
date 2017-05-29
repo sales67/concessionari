@@ -12,7 +12,7 @@ import {Routes,Router} from '@angular/router';
 
     export class deleteModelComponent{
         
-        deleteId;data;logError;getMarca;list;id;deleteId2;models;error;finished;
+        deleteId;data;logError;getMarca;list;id;deleteId2;models;error;finished;idMarca;
 
     constructor(private deleteModelService: deleteModelService) { }
              
@@ -62,5 +62,7 @@ import {Routes,Router} from '@angular/router';
            {
              console.log("for");
            }*/
+            
+            
         }
     }
