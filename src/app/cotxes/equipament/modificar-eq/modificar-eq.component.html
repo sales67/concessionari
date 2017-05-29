@@ -2,6 +2,18 @@
 
 <h2>Modificar un equipament</h2>
 
+<!--<div *ngIf="error_mod; else success_mod" class="error alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
+    Error a l'hora de modificar un equipament (html)
+    <br> <br>
+</div>
+
+<ng-template #success_mod>
+    <div *ngIf="finished" class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">     
+        Equipament modificat correctament (html)
+    </div>
+    <br> <br>
+</ng-template>-->
+
 <form name="modificarEquipament">
     
     <input type="text" name="idEq4" id="idEq4" [(ngModel)]="idEq4">

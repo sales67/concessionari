@@ -24,7 +24,18 @@ export class CrearEQComponent implements OnInit {
     crearMulti9: boolean;
     crearPreu: number;
     
+    min_potencia = 50;
+    max_potencia = 1500;
+    min_preu = 1;
+    max_preu = 20000;
+    
     missatge_crear: string;
+    
+    error;
+    errorBuit;
+    errorServer;
+    finished;
+    values;
     
     public combustibles = [
         { value: 'Gasolina', display: 'Gasolina' },
@@ -86,18 +97,40 @@ export class CrearEQComponent implements OnInit {
         this.crearPreu;
     }
 
+    esNomValid() {
+        let regex = /^[a-zA-Z0-9_-]{3,15}/;
+        return(regex.test(this.crearNom));
+    }
+
     isNumber(val) { return typeof val === 'number'; }
 
     crearEquipament() {
         this.equipamentService.crearEquipamentPost(this.crearNom, this.crearCombustible, this.crearPotencia, this.crearTraccio, this.crearClimatitzador,
                                                    this.crearLlantes17, this.crearLlantes18, this.crearLlantes19, this.crearNavegador, this.crearPintura,
                                                    this.crearMulti6, this.crearMulti9, this.crearPreu)
-            .subscribe(
-                data => { this.crearNom = data; },
-                err => { this.missatge_crear = "S'ha produit un error a l'hora de crear l'equipament: "; },
-                
-                () => console.log('has creat un nou equipament: ' + this.crearNom)
+        .catch((error: any) => {             
+               if (error.status === 0 || error.status === "0") {
+                    console.log("Servidor Aturat"); 
+                    this.errorServer = true;
+               } else if (error.status === 400 || error.status === "400")
+               {
+                   this.errorBuit = true;
+               } else if (error.status === 500 || error.status === "500")
+               {
+                   this.errorBuit = true;
+               } else {                    
+                   return error.json();
+               }            
+        }).subscribe(
+            value => this.values=value,
+            error => {},
+            () => this.finished = true
         );
+        
+        
+        this.finished = false;
+        this.errorBuit=false;
+        this.errorServer=false;
     }
 
 }

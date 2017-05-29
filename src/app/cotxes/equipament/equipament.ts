@@ -1,9 +1,9 @@
 export class Equipament {
     public id: number;
-    public name: string;
-    public combustible: string;
-    public potencia: number;
-    public traccio: string;
+    public name?: string;
+    public combustible?: string;
+    public potencia?: number;
+    public traccio?: string;
     public climatitzador: boolean;
     public llantes17: boolean;
     public llantes18: boolean;
@@ -13,5 +13,5 @@ export class Equipament {
     public multimedia6: boolean;
     public multimedia9: boolean;
     public preu: number;
-    public model: number;
+    // public model: number;
 }
