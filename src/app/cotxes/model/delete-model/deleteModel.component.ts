@@ -1,4 +1,4 @@
-﻿import {Component, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {deleteModelService} from './deleteModel.service';
 import {Http, Headers,Response} from '@angular/http';
 import {Routes,Router} from '@angular/router';
@@ -39,9 +39,9 @@ import {Routes,Router} from '@angular/router';
                list[i]
              }
         }*/
-        deleteByMarca(){
+        deleteByMarca(idMarca){
           var lista;
-           this.list = this.deleteModelService.getByMarca(this.getMarca).subscribe(
+           this.list = this.deleteModelService.getByMarca(idMarca).subscribe(
               value => {lista = value;
                  for (var i = lista.length - 1; i >= 0; i--) {
                    var resposta = lista[i];

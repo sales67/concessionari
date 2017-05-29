@@ -20,8 +20,7 @@ import {Routes,Router} from '@angular/router';
                             
         updateMarca(){              this.updateMarcaService.updateMarca(this.addId,this.addName,this.addTel,this.addCountry,this.addMail)
                   .catch((error: any) => {               
-               if (error.status === 0 || error.status === "0") {
-                   console.log("Servidor Parat"); 
+               if (error.status === 0 || error.status === "0") {                   
                     this.errorServer=true;
                     }   
                 else if (error.status === 400 || error.status === "400")
