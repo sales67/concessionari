@@ -1,14 +1,17 @@
 ﻿<form name="put" display="block">
   <h2>Modifica els clients</h2>
-  <br />
-  <div *ngIf="errorU;else success" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">
-    <strong>Error!</strong> Hi ha algún camp buit o la id no existeix
+  <div *ngIf="errorBuitU" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">
+    <strong>Error!</strong> Hi ha algún camp buit
   </div>
-  <ng-template #success>
+  <div *ngIf="errorClientU" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">
+    <strong>Error!</strong> Client inexistent
+  </div>
+  <div *ngIf="errorServerU" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">
+    <strong>Error!</strong> Server off
+  </div>
     <div *ngIf="finishedU" class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">
       <strong>Correcte! </strong>S'han actualitzat les dades
     </div>
-  </ng-template>
   <label for="content">Numero identificatiu del client</label><br>
   <input type="text" name="putPn" [(ngModel)]="idU"><br />
   <label for="content">Dni del client</label><br>

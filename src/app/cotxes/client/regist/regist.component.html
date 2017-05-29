@@ -2,6 +2,15 @@
 <form name="formul">
   <div name="regist">
 
+    <div *ngIf="finishedR" class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">
+      <strong>Correcte! </strong>S'ha registrat el client
+    </div>
+    <div *ngIf="errorServerR" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">
+      <strong>Error!</strong> Server off
+    </div>
+    <div *ngIf="errorBuitR" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">
+      <strong>Error!</strong> Ompli tots els camps
+    </div>
     <!--<label for="content">Numero identificatiu</label><br />
     <input type="text" name="id" [(ngModel)]="idR"><br />-->
     <label for="content">Dni</label><br />

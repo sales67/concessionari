@@ -14,16 +14,31 @@ import { Client } from '../client';
 })
 export class RegistComponent implements OnInit{
 
-    dniR; nomR; cognomsR; correuR; direccioR; telefonR; registC;
+    dniR; nomR; cognomsR; correuR; direccioR; telefonR; registC; finishedR; errorServerR; errorBuitR;
 
     constructor(private registService: RegistService) { }
     registButton() {
 
         this.registService.registClient(this.dniR, this.nomR, this.cognomsR,
-                                        this.correuR, this.direccioR, this.telefonR)
+            this.correuR, this.direccioR, this.telefonR)
+            .catch((error: any) => {
+                if (error.status === 400) {
+                    this.errorBuitR = true;
+                }
+                else if (error.status === 0) {
+                    this.errorServerR = true;
+                }
+                else {
+                    this.finishedR = true;
+                    return error.json();
+                }
+            })
             .subscribe(
             data => { this.registC = data },
             () => console.log('Has afegit a' + this.nomR));
+        this.errorServerR = false;
+        this.errorBuitR = false;
+        this.finishedR = false;
     }
 
     ngOnInit() {

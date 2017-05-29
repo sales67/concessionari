@@ -44,28 +44,7 @@ export class UpdateService {
         headers.append('Access-Control-Allow-Origin', '*');
 
         return this.http.put("http://172.17.0.161:8080/client/put?" + body, options)
-            .map((res: Response) => {
-                if (res) {
-                    if (res.status === 201) {
-                        return [{ status: res.status, json: res }]
-                    }
-                    else if (res.status === 200) {
-                        return [{ status: res.status, json: res }]
-                    }
-                }
-                })
-            .catch((error: any) => {
-                if (error.status === 500 || error.status === "500") {
-                    console.log("Client inexistent");
-                }
-                else if (error.status === 400) {
-                    console.log("Falten dades");
-                }
-                else {
-                    return error.json();
-                }
-                
-            });
+            .map(res => res.json());
     }
 
 }
