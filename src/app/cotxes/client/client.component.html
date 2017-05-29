@@ -4,16 +4,12 @@
   <label for="telefonClient">Telefon del client: </label>
   <input type="text" name="telefonClient" [(ngModel)]="telefonClient"> <br>
 </form>
-
-  <div *ngIf="errorServer" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">
-    <strong>Error!</strong> Server off
-  </div>
-  <div *ngIf="errorClient" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">
+<div *ngIf="errorServerU" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">
+  <strong>Error!</strong> Server off
+</div>
+  <div *ngIf="error" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">
     <strong>Error!</strong> Client inexistent
-  </div>
-  <div *ngIf="errorBuit" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">
-    <strong>Error!</strong> Ompli el camp
-  </div>
+</div>
 
 
 <!--<ng-template #success>

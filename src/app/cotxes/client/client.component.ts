@@ -17,13 +17,21 @@ export class ClientComponent implements OnInit {
 
     id;
     clients;//es la variable del for
-    telefonClient; errorC; finishedC; errorServer; errorClient; errorBuit;
-    
+    telefonClient; error; finished; errorServerU; finishedU;
 
     constructor(private clientService: ClientService) { }
 
     listButton() {
         this.clientService.listClients()
+            .catch((error: any) => {
+                if (error.status === 0) {
+                    this.errorServerU = true;
+                } else {
+                    this.finishedU = true;
+                    return error.json();
+                }
+            })
+
             
         .subscribe(
             data => { this.clients = data; console.log(data); },)
@@ -31,34 +39,22 @@ export class ClientComponent implements OnInit {
     }
 
     listButtonId() {//no hem mostra els error ( retorna undefinded el data )
-        this.clientService.listClient(this.telefonClient)
-            .catch((error: any) => {
-                if (error.status === 500 || error.status === "500") {
-                    this.errorClient = true;
-                }
-                else if (error.status === 400) {
-                    this.errorBuit = true;
-                }
-                else if (error.status === 0) {
-                    this.errorServer = true;
-                }
-                else {
-                    return error.json();
-                }
-            })
+        this.clientService.listClient(this.telefonClient)          
             .subscribe(
-            data => {
-            this.clients = data;
+            value => {
+                this.clients = value;
+                console.log(this.clients);
 
-            console.log(this.clients);
+                if (this.clients.length == 0) {
+                    this.error = true;
+                }
             },
-            error => {},
-            () => this.finishedC = true
-        );
-        this.errorServer = false;
-        this.errorClient = false;
-        this.errorBuit = false;
-        this.finishedC = false;
+            error => this.error = true,
+            () => this.finished = true
+            );
+        this.error = false;
+        this.finished = false;
+
     }
 
 
