@@ -12,12 +12,12 @@ private delMarcaUrl = 'http://172.17.0.242:8080/demo/getModelXmarca?marca=';
 constructor(private http: Http){}
     
 deleteModel(deleteId){ 
-        
+        console.log("deleteid "+this.delUrl+deleteId);
         //var a = this.http.delete(this.delUrl+ deleteId).map(res => res.json());
     	
        var headers = new Headers();
        headers.append('Content-Type', 'application/x-www-form-urlencoded');
-
+       //headers.append('Access-Control-Allow-Origin', '*');       	
 
        return this.http.delete(this.delUrl+ deleteId, {
            headers: headers
@@ -25,7 +25,7 @@ deleteModel(deleteId){
            .map((response: Response) => {  
                console.log("Actualitzat");
            })
-           .catch((error: any) => {
+           /*.catch((error: any) => {
                if (error.status === 500 || error.status === "500") {
                    console.log("Inexistent");                   
                }
@@ -35,7 +35,7 @@ deleteModel(deleteId){
                else {
                    return error.json();
                }
-        }) 
+        }) */
     }
 
     
@@ -43,7 +43,7 @@ deleteModel(deleteId){
 
 getByMarca(getMarca){
 	var list = this.http.get(this.delMarcaUrl+ getMarca).map(res=> res.json());
-			
+			console.log(getMarca+ "arribat");
 	return list;
 
 	/*

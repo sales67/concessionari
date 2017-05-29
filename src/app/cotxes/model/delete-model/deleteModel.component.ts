@@ -21,6 +21,7 @@ import {Routes,Router} from '@angular/router';
       
         }*/
          deleteModel(){  
+
             this.deleteModelService.deleteModel(this.deleteId).subscribe(
                   value => this.models=value,              
                   error => this.error = true,
@@ -40,12 +41,13 @@ import {Routes,Router} from '@angular/router';
         }*/
         deleteByMarca(){
           var lista;
-           this.list = this.deleteModelService.getByMarca(this.getMarca);
-           this.list.subscribe(
-              data => {lista = data;
+           this.list = this.deleteModelService.getByMarca(this.getMarca).subscribe(
+              value => {lista = value;
                  for (var i = lista.length - 1; i >= 0; i--) {
                    var resposta = lista[i];
-                   this.deleteModelService.deleteModel(resposta.id);
+                   console.log("for "+lista[i].id);
+                   this.deleteId = lista[i].id;
+                   this.deleteModel();
                  }
               },
               () => {console.log("complert")}
