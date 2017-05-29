@@ -1,5 +1,4 @@
 ﻿import {Component, OnInit} from '@angular/core';
-//import {StateService} from '../common/state.service';
 import {deleteModelService} from './deleteModel.service';
 import {Http, Headers,Response} from '@angular/http';
 import {Routes,Router} from '@angular/router';
@@ -13,14 +12,25 @@ import {Routes,Router} from '@angular/router';
 
     export class deleteModelComponent{
         
-        deleteId;data;logError;getMarca;list;id;deleteId2;
+        deleteId;data;logError;getMarca;list;id;deleteId2;models;error;finished;
 
     constructor(private deleteModelService: deleteModelService) { }
              
-        deleteModel(){  
+        /*deleteModel(){  
             this.deleteModelService.deleteModel(this.deleteId)               
       
-        }
+        }*/
+         deleteModel(){  
+            this.deleteModelService.deleteModel(this.deleteId).subscribe(
+                  value => this.models=value,              
+                  error => this.error = true,
+                  () => this.finished = true
+              );
+                this.error=false;
+                this.finished=false;
+            
+                }
+            
         /////// TREBALLAR EN AIXO //////////
         /*deleteByMarca(){
              var list = this.deleteModelService.deleteByMarca(this.deleteMarca);
