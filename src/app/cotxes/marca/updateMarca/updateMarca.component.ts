@@ -13,21 +13,38 @@ import {Routes,Router} from '@angular/router';
 
     export class UpdateMarcaComponent{
         
-    addId;addName;addTel;addCountry;addMail;values;error;finished;
+    addId;addName;addTel;addCountry;addMail;values;errorBuit;finished;errorServer;errorId;
         
 
     constructor(private updateMarcaService: UpdateMarcaService) { }
                             
-        updateMarca(){        this.updateMarcaService.updateMarca(this.addId,this.addName,this.addTel,this.addCountry,this.addMail)
-               .subscribe(
+        updateMarca(){              this.updateMarcaService.updateMarca(this.addId,this.addName,this.addTel,this.addCountry,this.addMail)
+                  .catch((error: any) => {               
+               if (error.status === 0 || error.status === "0") {
+                   console.log("Servidor Parat"); 
+                    this.errorServer=true;
+                    }   
+                else if (error.status === 400 || error.status === "400")
+                    {
+                        this.errorBuit = true; 
+                    }
+                else if (error.status === 500 || error.status === "500")
+                    {
+                        this.errorId = true; 
+                    }
+                else {                    
+                   return error.json();                    
+                }            
+        }).subscribe(
           value => this.values=value,
-          error => this.error = true,
-          () => this.finished = true
+          error => {},
+          () => this.finished = true         
       );
-        this.error=false;
+        this.errorBuit=false;
+        this.errorServer=false;
         this.finished=false;
-     }
-        
+        this.errorId=false;       
+     }    
 }
 
                       

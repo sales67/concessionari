@@ -1,5 +1,5 @@
 import {Injectable}  from '@angular/core';
-import {Http,Headers}  from '@angular/http';
+import {Http,Headers,Response}  from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 
 
@@ -20,10 +20,10 @@ addMarcaPost(addName,addTel,addCountry,addMail){
           var headers = new Headers();
         headers.append('Content-Type', 'application/x-www-form-urlencoded');
         
-        var a = this.http.post(this.addUrl,creds,{
+        return this.http.post(this.addUrl,creds,{
             headers:headers
         })
-                    .map(res => res.json());
-        return a; 
+           .map((response: Response) => {})
+           
     }
 }

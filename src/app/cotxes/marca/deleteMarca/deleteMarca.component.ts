@@ -12,12 +12,19 @@ import {Routes,Router} from '@angular/router';
 
     export class DeleteMarcaComponent{
         
-        deleteId;data;logError;
+        deleteId;data;logError;marques;error;finished;
 
     constructor(private deleteMarcaService: DeleteMarcaService) { }
              
         deleteMarca(){  
-            this.deleteMarcaService.deleteMarca(this.deleteId)               
-      
+            this.deleteMarcaService.deleteMarca(this.deleteId)          
+    .subscribe(
+          value => this.marques=value,              
+          error => this.error = true,
+          () => this.finished = true
+      );
+        this.error=false;
+        this.finished=false;
+    
         }
     }

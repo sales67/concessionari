@@ -1,5 +1,14 @@
 <html>
     <body>
+        <div *ngIf="finished" class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">     
+    <strong>Moltbe!</strong> Nova marca guardada Correctament
+</div>
+         <div *ngIf="errorBuit" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
+    <strong>Error!</strong> Hi ha algún camp buit
+</div>
+        <div *ngIf="errorServer" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
+    <strong>Error!</strong> Server not Works!
+</div>
     <form name="addMarca" display="block">      
             <h2>Introdueix una nova Marca de cotxes</h2>		        
             <label for="content">Entra el nom  </label><br>
