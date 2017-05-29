@@ -20,20 +20,8 @@ deleteMarca(deleteId){
        return this.http.delete(this.delUrl+ crear, {
            headers: headers
        })
-           .map((response: Response) => {  
-               console.log("Client actualitzat");
-           })
-           .catch((error: any) => {
-               if (error.status === 500 || error.status === "500") {
-                   console.log("Client Inexistent");                   
-               }
-               else if (error.status === 400 || error.status === "400") {
-                   console.log("Falten dades");
-               }
-               else {
-                   return error.json();
-               }
-        }) 
+           .map((response: Response) => {})
+            
     }
 
 }
