@@ -1,7 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+﻿import {Component, OnInit, ViewChild} from '@angular/core';
 import {deleteModelService} from './deleteModel.service';
 import {Http, Headers,Response} from '@angular/http';
 import {Routes,Router} from '@angular/router';
+import 'rxjs/add/observable/of';
+import{EsborrarEQComponent} from "../../equipament/esborrar-eq/esborrar-eq.component";
 
 @Component({
   selector: 'deleteModel',
@@ -12,7 +14,14 @@ import {Routes,Router} from '@angular/router';
 
     export class deleteModelComponent{
         
+<<<<<<< HEAD
         deleteId;data;logError;getMarca;list;id;deleteId2;models;error;finished;
+=======
+        getModelModel;deleteId;data;logError;getMarca;list;id;deleteId2;models;error;finished;
+
+
+
+>>>>>>> ff3dd519b936ee74c89a6bbf1c02779307628641
 
     constructor(private deleteModelService: deleteModelService) { }
              
@@ -32,6 +41,9 @@ import {Routes,Router} from '@angular/router';
             
                 }
             
+        //    deleteModelModel(model){
+        //          EsborrarEQComponent.delEqModel(model);
+        //    }
         /////// TREBALLAR EN AIXO //////////
         /*deleteByMarca(){
              var list = this.deleteModelService.deleteByMarca(this.deleteMarca);
