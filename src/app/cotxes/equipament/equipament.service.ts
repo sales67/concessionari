@@ -139,6 +139,6 @@ export class EquipamentService {
         
         return this.http.post(this.myURL + '/demo/add?', creds, {
             headers:headers
-        }).map(res => res.json())   
+        }).map(res => {console.log("la resposta és: " + res.json()), res.json()})   
     }
 }

@@ -2,12 +2,12 @@
 <br>
     <h2>Introdueix les dades per crear un nou equipament:</h2>
     
-    <div *ngIf="finished" class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">     
-        <span class="ok">S'ha creat un nou equipament</span> <br><br>
+    <div *ngIf="finished && !errorBuit && !errorServer" class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">     
+        <span class="totb">S'ha creat un nou equipament</span> <br><br>
     </div>
          
     <div *ngIf="errorBuit" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
-        <span class="error">No s'ha pogut crear l'equipament, falten dades</span> <br><br>
+        <span class="error">No s'ha pogut crear l'equipament, falten dades o són incorrectes</span> <br><br>
     </div>
     
     <div *ngIf="errorServer" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
