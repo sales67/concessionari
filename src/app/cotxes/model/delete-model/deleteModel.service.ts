@@ -38,7 +38,17 @@ deleteModel(deleteId){
         }) */
     }
 
-    
+    getByModel(model){
+	var list = this.http.get(this.delMarcaUrl+ model).map(res=> res.json());
+			console.log(model+ "arribat");
+	return list;
+
+	/*
+	var a = this.http.get(this.listUrl)
+                .map(res => res.json())
+      return a;
+      */
+	}
 
 
 getByMarca(getMarca){
