@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { Equipament } from '../equipament';
 import { EquipamentService } from '../equipament.service';
+
+import { DeleteMarcaComponent } from '../../marca/deleteMarca/deleteMarca.component';
 
 @Component({
   selector: 'app-esborrar-eq',
@@ -8,7 +10,8 @@ import { EquipamentService } from '../equipament.service';
   styleUrls: ['./esborrar-eq.component.css'],
   providers: [EquipamentService]
 })
-export class EsborrarEQComponent implements OnInit {
+//export class EsborrarEQComponent implements OnInit {
+export class EsborrarEQComponent implements AfterViewInit {
     
     idEq2: number;
     idModel: number;
@@ -20,7 +23,12 @@ export class EsborrarEQComponent implements OnInit {
 
     constructor( private equipamentService: EquipamentService) { }
 
-    ngOnInit() { }
+    @ViewChild(DeleteMarcaComponent) funcions: DeleteMarcaComponent;
+    
+    // ngOnInit() { }
+    ngAfterViewInit() {
+        this.funcions.deleteMarca(11);
+    }
     
     delEq() {
         this.equipamentService.esborrarEq(this.idEq2)
