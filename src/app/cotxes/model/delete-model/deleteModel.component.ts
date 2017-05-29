@@ -12,7 +12,7 @@ import {Routes,Router} from '@angular/router';
 
     export class deleteModelComponent{
         
-        deleteId;data;logError;getMarca;list;id;deleteId2;models;error;finished;idMarca;
+        deleteId;data;logError;getMarca;list;id;deleteId2;models;error;finished;
 
     constructor(private deleteModelService: deleteModelService) { }
              
@@ -21,7 +21,7 @@ import {Routes,Router} from '@angular/router';
       
         }*/
          deleteModel(){  
-
+             
             this.deleteModelService.deleteModel(this.deleteId).subscribe(
                   value => this.models=value,              
                   error => this.error = true,
