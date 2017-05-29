@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {DeleteMarcaService} from '../deleteMarca/deleteMarca.service';
 import {Http, Headers,Response} from '@angular/http';
 import {Routes,Router} from '@angular/router';
-import {deleteModelComponent} from '../../model/delete-model/deleteModel.component';
+//import {deleteModelComponent} from '../../model/delete-model/deleteModel.component';
 
 @Component({
   selector: 'deleteMarca',
@@ -26,7 +26,8 @@ import {deleteModelComponent} from '../../model/delete-model/deleteModel.compone
           () => this.finished = true
       );
         this.error=false;
-        this.finished=false;  
-        deleteModelComponent.deleteByMarca(this.deleteId);
-        }
+        this.finished=false; 
+            
+        }  
+        
     }

@@ -1,4 +1,4 @@
-﻿import {Component, OnInit} from '@angular/core';
+﻿import {Component, OnInit, ViewChild} from '@angular/core';
 import {deleteModelService} from './deleteModel.service';
 import {Http, Headers,Response} from '@angular/http';
 import {Routes,Router} from '@angular/router';
@@ -15,6 +15,9 @@ import{EsborrarEQComponent} from "../../equipament/esborrar-eq/esborrar-eq.compo
     export class deleteModelComponent{
         
         getModelModel;deleteId;data;logError;getMarca;list;id;deleteId2;models;error;finished;
+
+
+
 
     constructor(private deleteModelService: deleteModelService) { }
              
@@ -34,9 +37,9 @@ import{EsborrarEQComponent} from "../../equipament/esborrar-eq/esborrar-eq.compo
             
                 }
             
-            deleteModelModel(model){
-                  EsborrarEQComponent.delEqModel(model);
-            }
+        //    deleteModelModel(model){
+        //          EsborrarEQComponent.delEqModel(model);
+        //    }
         /////// TREBALLAR EN AIXO //////////
         /*deleteByMarca(){
              var list = this.deleteModelService.deleteByMarca(this.deleteMarca);
@@ -67,5 +70,7 @@ import{EsborrarEQComponent} from "../../equipament/esborrar-eq/esborrar-eq.compo
            {
              console.log("for");
            }*/
+            
+            
         }
     }
