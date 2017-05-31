@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Equipament } from '../equipament';
 import { EquipamentService } from '../equipament.service';
+// import { Response}  from '@angular/http';
 
 @Component({
   selector: 'app-crear-eq',
@@ -10,7 +11,7 @@ import { EquipamentService } from '../equipament.service';
 })
 export class CrearEQComponent implements OnInit {
 
-    crearNom: string;
+    crearNom: string = "";
     crearCombustible: string;
     crearPotencia: number;
     crearTraccio: string;
@@ -108,26 +109,29 @@ export class CrearEQComponent implements OnInit {
         this.equipamentService.crearEquipamentPost(this.crearNom, this.crearCombustible, this.crearPotencia, this.crearTraccio, this.crearClimatitzador,
                                                    this.crearLlantes17, this.crearLlantes18, this.crearLlantes19, this.crearNavegador, this.crearPintura,
                                                    this.crearMulti6, this.crearMulti9, this.crearPreu)
-        .catch((error: any) => {             
+        .catch((error: any) => {  
+            
                if (error.status === 0 || error.status === "0") {
                     console.log("Servidor Aturat"); 
                     this.errorServer = true;
                } else if (error.status === 400 || error.status === "400")
                {
+                   console.log("error 400"); 
                    this.errorBuit = true;
                } else if (error.status === 500 || error.status === "500")
                {
+                   console.log("error 500"); 
                    this.errorBuit = true;
-               } else {                    
+               } else {
                    return error.json();
-               }            
+               }
         }).subscribe(
             value => this.values=value,
-            error => {},
-            () => this.finished = true
+            //error => {},
+            () => {console.log("finish es true"), this.finished = true}
         );
         
-        
+        this.error = false;
         this.finished = false;
         this.errorBuit=false;
         this.errorServer=false;

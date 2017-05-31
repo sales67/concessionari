@@ -19,7 +19,7 @@ import {Routes,Router} from '@angular/router';
     listModel(){
      this.listMarcaService.getModels()
                 .subscribe(
-                data => { this.models = data;console.log(data);},
+                data => { this.models = data;},
                 err => console.error(err),
                 () => console.log('done')
       );}
