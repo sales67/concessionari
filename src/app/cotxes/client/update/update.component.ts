@@ -16,7 +16,7 @@ import { Client } from '../client';
 })
 export class UpdateComponent implements OnInit {
 
-    idU; dniU; nomU; cognomsU; correuU; direccioU; telefonU; errorClientU; updateC; errorBuitU; errorU; finishedU; errorServerU;
+    idU; dniU; nomU; cognomsU; correuU; errorBDU; direccioU; telefonU; errorClientU; updateC; errorBuitU; errorU; finishedU; errorServerU;
 
     constructor(private updateService: UpdateService) { }
 
@@ -35,6 +35,9 @@ export class UpdateComponent implements OnInit {
                 else if (error.status === 0) {
                     this.errorServerU = true;
                 }
+                else if (error.status === 503) {
+                    this.errorBDU = true;
+                }
                 else {
                     this.finishedU = true;
                     return error.json();
@@ -44,6 +47,7 @@ export class UpdateComponent implements OnInit {
              error => this.errorU = true,
                 () => this.finishedU = true
       );
+        this.errorBDU = false;
         this.errorU = false;
         this.finishedU = false;
         this.errorServerU = false;

@@ -9,9 +9,12 @@
   <div *ngIf="errorServerU" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">
     <strong>Error!</strong> Server off
   </div>
-    <div *ngIf="finishedU" class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">
+    <div *ngIf="finishedU && !errorClientU" class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">
       <strong>Correcte! </strong>S'han actualitzat les dades
     </div>
+  <div *ngIf="errorBDU" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">
+    <strong>Error!</strong> BBDD inaccessible
+  </div>
   <label for="content">Numero identificatiu del client</label><br>
   <input type="text" name="putPn" [(ngModel)]="idU"><br />
   <label for="content">Dni del client</label><br>

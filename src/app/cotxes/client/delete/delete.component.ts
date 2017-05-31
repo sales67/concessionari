@@ -22,7 +22,7 @@ export class DeleteComponent implements OnInit {
 
         this.deleteService.deleteClient(this.idD)
             .catch((error: any) => {
-                if (error.status === 500 || error.status === "500") {
+                if (error.status === 500 || error.status === 404) {
                     this.errorClientD = true;
                 }
                 else if (error.status === 400) {

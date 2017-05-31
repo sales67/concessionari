@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
+﻿import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { Equipament } from '../equipament';
 import { EquipamentService } from '../equipament.service';
 
@@ -27,7 +27,7 @@ export class EsborrarEQComponent implements AfterViewInit {
     
     // ngOnInit() { }
     ngAfterViewInit() {
-        this.funcions.deleteMarca(11);
+        this.funcions.deleteMarca();
     }
     
     delEq() {

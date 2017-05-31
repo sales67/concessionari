@@ -14,7 +14,7 @@ import { Client } from '../client';
 })
 export class RegistComponent implements OnInit{
 
-    dniR; nomR; cognomsR; correuR; direccioR; telefonR; registC; finishedR; errorServerR; errorBuitR;
+    dniR; nomR; cognomsR; correuR; direccioR; errorBDR; telefonR; registC; finishedR; errorServerR; errorBuitR;
 
     constructor(private registService: RegistService) { }
     registButton() {
@@ -28,6 +28,9 @@ export class RegistComponent implements OnInit{
                 else if (error.status === 0) {
                     this.errorServerR = true;
                 }
+                else if (error.status === 503) {
+                    this.errorBDR = true;
+                }
                 else {
                     this.finishedR = true;
                     return error.json();
@@ -35,7 +38,8 @@ export class RegistComponent implements OnInit{
             })
             .subscribe(
             data => { this.registC = data },
-            () => console.log('Has afegit a' + this.nomR));
+            () => console.log('Has afegit a ' + this.nomR));
+        this.errorBDR = false;
         this.errorServerR = false;
         this.errorBuitR = false;
         this.finishedR = false;

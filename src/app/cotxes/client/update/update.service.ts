@@ -27,6 +27,7 @@ export class UpdateService {
             .map(res => res.json());
         return a;
     }*/
+    
     updateClient(idU, dniU, nomU, cognomsU, direccioU, correuU, telefonU) {
 
         let params: URLSearchParams = new URLSearchParams();
