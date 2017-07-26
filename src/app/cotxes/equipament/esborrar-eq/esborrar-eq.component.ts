@@ -1,13 +1,11 @@
-<<<<<<< HEAD
+﻿
 ﻿import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
-=======
-import { Component, OnInit, ViewChild } from '@angular/core';
->>>>>>> 3ba15fe7feee2a058b9549cb6518d42e87a5d02c
 import { Equipament } from '../equipament';
 import { EquipamentService } from '../equipament.service';
 
 import { DeleteComponent } from '../../client/delete/delete.component';
 import { DeleteService } from '../../client/delete/delete.service';
+import { DeleteMarcaComponent } from '../../marca/deleteMarca/deleteMarca.component';
 
 @Component({
   selector: 'app-esborrar-eq',
@@ -33,14 +31,13 @@ export class EsborrarEQComponent {
     del_client;
 
     constructor( private equipamentService: EquipamentService, private deleteComponent: DeleteComponent, private deleteService: DeleteService) { }
-
-<<<<<<< HEAD
+    /*
     @ViewChild(DeleteMarcaComponent) funcions: DeleteMarcaComponent;
     
     // ngOnInit() { }
     ngAfterViewInit() {
         this.funcions.deleteMarca();
-=======
+
     @ViewChild(DeleteComponent) DeleteComponent;
     deleteClient(){
         this.deleteService.deleteClient(this.del_client)
@@ -72,7 +69,7 @@ export class EsborrarEQComponent {
         this.errorServer=false;
         this.errorBuit=false;
         this.finished=false;
->>>>>>> 3ba15fe7feee2a058b9549cb6518d42e87a5d02c
+
     }
     
     
@@ -85,7 +82,7 @@ export class EsborrarEQComponent {
             () => { this.missatge_del = ""; this.error_del = ""; }
         );
     }*/
-
+/*
     delEq() {
         this.equipamentService.esborrarEq(this.idEq2)
             .catch((error: any) => { 
@@ -129,5 +126,5 @@ export class EsborrarEQComponent {
             // suc => { this.missatge = "S'ha esborrat l'equipament " + this.idEq2; },
             () => { this.missatge_del_model = ""; this.error_del_model = ""; }
         );
-    }
+    }*/
 }
